@@ -14,14 +14,14 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                               <th>id_emp</th>
-                               <th>nom_emp</th>
-                               <th>pren_emp</th>
-                               <th>cin_emp</th>
-                               <th>password</th>
-                               <th>naiss_emp</th>
-                               <th>fonction</th>
-                               <th></th>                              
+                                    <th>id_emp</th>
+                                    <th>nom_emp</th>
+                                    <th>pren_emp</th>
+                                    <th>cin_emp</th>
+                                    <th>password</th>
+                                    <th>naiss_emp</th>
+                                    <th>fonction</th>
+                                    <th colspan="2"></th>                              
                                 </tr>
                         </thead>
                         
@@ -30,16 +30,23 @@
                             foreach ($res as $obj) {
                             ?>
                                 <tr>
-                                 <td><?php echo $obj->id_emp ?></td>
-                                 <td><?php echo $obj->nom_emp ?></td>
-                                 <td><?php echo $obj->pren_emp ?></td>
-                                 <td><?php echo $obj->cin_emp ?></td>
-                                 <td><?php echo $obj->password ?></td>
-                                 <td><?php echo $obj->naiss_emp ?></td>
-                                 <td><?php echo $obj->fonction ?></td>
-                                 <td>
-                                   <button type="button"> <a  href="index.php?controller=employeur&action=delete&id_emp=<?php echo $obj->id_emp;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a></button>
-                                   <button type="button"> <a  href="index.php?controller=employeur&action=edit1&id_emp=<?php echo $obj->id_emp;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a></button></td>                              
+                                    <td><?php echo $obj->id_emp ?></td>
+                                    <td><?php echo $obj->nom_emp ?></td>
+                                    <td><?php echo $obj->pren_emp ?></td>
+                                    <td><?php echo $obj->cin_emp ?></td>
+                                    <td><?php echo $obj->password ?></td>
+                                    <td><?php echo $obj->naiss_emp ?></td>
+                                    <td><?php echo $obj->fonction ?></td>
+                                    <td style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=employeur&action=delete&id_emp=<?php echo $obj->id_emp;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
+                                        </button>
+                                    </td>
+                                    <td  style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=employeur&action=edit1&id_emp=<?php echo $obj->id_emp;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
+                                        </button> 
+                                    </td>                              
                                 </tr>
                             <?php
                                 }

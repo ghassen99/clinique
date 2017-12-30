@@ -14,9 +14,9 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                               <th>id_spec</th>
-                               <th>lib_spec</th>
-                               <th></th>                              
+                                    <th>id_spec</th>
+                                    <th>lib_spec</th>
+                                    <th colspan="2"></th>                              
                                 </tr>
                         </thead>
                         
@@ -25,11 +25,18 @@
                             foreach ($res as $obj) {
                             ?>
                                 <tr>
-                                 <td><?php echo $obj->id_spec ?></td>
-                                 <td><?php echo $obj->lib_spec ?></td>
-                                 <td>
-                                   <button type="button"> <a  href="index.php?controller=specialite&action=delete&id_spec=<?php echo $obj->id_spec;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a></button>
-                                   <button type="button"> <a  href="index.php?controller=specialite&action=edit1&id_spec=<?php echo $obj->id_spec;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a></button></td>                              
+                                    <td><?php echo $obj->id_spec ?></td>
+                                    <td><?php echo $obj->lib_spec ?></td>
+                                    <td style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=specialite&action=delete&id_spec=<?php echo $obj->id_spec;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
+                                        </button>
+                                    </td>
+                                    <td  style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=specialite&action=edit1&id_spec=<?php echo $obj->id_spec;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
+                                        </button> 
+                                    </td>                              
                                 </tr>
                             <?php
                                 }

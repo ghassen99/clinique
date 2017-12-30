@@ -20,36 +20,26 @@
 
                     <input type="hidden" name="id_m" value="<?php echo $res->id_m; ?>"><br>
                     
-                    <!-- id_m -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        id_m <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_maladie->id_m; ?>" id="id_m" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="id_m" placeholder="id_m" required type="text">
+                        <!-- lib_m -->
+                        <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                            lib_m <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input value="<?php echo $res_maladie->lib_m; ?>" id="lib_m" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_m" placeholder="lib_m" required type="text">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- lib_m -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        lib_m <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_maladie->lib_m; ?>" id="lib_m" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_m" placeholder="lib_m" required type="text">
+                        
+                        <!-- bloc -->
+                        <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                            bloc <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input value="<?php echo $res_maladie->bloc; ?>" id="bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="bloc" placeholder="bloc" required type="text">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- bloc -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        bloc <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_maladie->bloc; ?>" id="bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="bloc" placeholder="bloc" required type="text">
-                        </div>
-                    </div>
-                    
+                        
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">

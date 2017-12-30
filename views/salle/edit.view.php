@@ -20,46 +20,36 @@
 
                     <input type="hidden" name="id_salle" value="<?php echo $res->id_salle; ?>"><br>
                     
-                    <!-- id_salle -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        id_salle <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_salle->id_salle; ?>" id="id_salle" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="id_salle" placeholder="id_salle" required type="text">
+                        <!-- nb_lit -->
+                        <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                            nb_lit <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input value="<?php echo $res_salle->nb_lit; ?>" id="nb_lit" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nb_lit" placeholder="nb_lit" required type="text">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- nb_lit -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        nb_lit <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_salle->nb_lit; ?>" id="nb_lit" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nb_lit" placeholder="nb_lit" required type="text">
+                        
+                        <!-- etage -->
+                        <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                            etage <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input value="<?php echo $res_salle->etage; ?>" id="etage" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="etage" placeholder="etage" required type="text">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- etage -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        etage <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_salle->etage; ?>" id="etage" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="etage" placeholder="etage" required type="text">
+                        
+                        <!-- id_bloc -->
+                        <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                            id_bloc <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input value="<?php echo $res_salle->id_bloc; ?>" id="id_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="id_bloc" placeholder="id_bloc" required type="text">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- id_bloc -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        id_bloc <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_salle->id_bloc; ?>" id="id_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="id_bloc" placeholder="id_bloc" required type="text">
-                        </div>
-                    </div>
-                    
+                        
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">

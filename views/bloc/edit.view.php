@@ -20,26 +20,16 @@
 
                     <input type="hidden" name="id_bloc" value="<?php echo $res->id_bloc; ?>"><br>
                     
-                    <!-- id_bloc -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        id_bloc <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_bloc->id_bloc; ?>" id="id_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="id_bloc" placeholder="id_bloc" required type="text">
+                        <!-- lib_bloc -->
+                        <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                            lib_bloc <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input value="<?php echo $res_bloc->lib_bloc; ?>" id="lib_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_bloc" placeholder="lib_bloc" required type="text">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- lib_bloc -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        lib_bloc <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_bloc->lib_bloc; ?>" id="lib_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_bloc" placeholder="lib_bloc" required type="text">
-                        </div>
-                    </div>
-                    
+                        
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">

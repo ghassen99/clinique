@@ -14,14 +14,14 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                               <th>id_p</th>
-                               <th>nom_p</th>
-                               <th>prenom_p</th>
-                               <th>cin_p</th>
-                               <th>naissance_p</th>
-                               <th>adresse</th>
-                               <th>tel_p</th>
-                               <th></th>                              
+                                    <th>id_p</th>
+                                    <th>nom_p</th>
+                                    <th>prenom_p</th>
+                                    <th>cin_p</th>
+                                    <th>naissance_p</th>
+                                    <th>adresse</th>
+                                    <th>tel_p</th>
+                                    <th colspan="2"></th>                              
                                 </tr>
                         </thead>
                         
@@ -30,16 +30,23 @@
                             foreach ($res as $obj) {
                             ?>
                                 <tr>
-                                 <td><?php echo $obj->id_p ?></td>
-                                 <td><?php echo $obj->nom_p ?></td>
-                                 <td><?php echo $obj->prenom_p ?></td>
-                                 <td><?php echo $obj->cin_p ?></td>
-                                 <td><?php echo $obj->naissance_p ?></td>
-                                 <td><?php echo $obj->adresse ?></td>
-                                 <td><?php echo $obj->tel_p ?></td>
-                                 <td>
-                                   <button type="button"> <a  href="index.php?controller=patient&action=delete&id_p=<?php echo $obj->id_p;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a></button>
-                                   <button type="button"> <a  href="index.php?controller=patient&action=edit1&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a></button></td>                              
+                                    <td><?php echo $obj->id_p ?></td>
+                                    <td><?php echo $obj->nom_p ?></td>
+                                    <td><?php echo $obj->prenom_p ?></td>
+                                    <td><?php echo $obj->cin_p ?></td>
+                                    <td><?php echo $obj->naissance_p ?></td>
+                                    <td><?php echo $obj->adresse ?></td>
+                                    <td><?php echo $obj->tel_p ?></td>
+                                    <td style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=patient&action=delete&id_p=<?php echo $obj->id_p;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
+                                        </button>
+                                    </td>
+                                    <td  style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=patient&action=edit1&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
+                                        </button> 
+                                    </td>                              
                                 </tr>
                             <?php
                                 }

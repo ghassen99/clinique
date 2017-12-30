@@ -14,11 +14,11 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                               <th>id_salle</th>
-                               <th>nb_lit</th>
-                               <th>etage</th>
-                               <th>id_bloc</th>
-                               <th></th>                              
+                                    <th>id_salle</th>
+                                    <th>nb_lit</th>
+                                    <th>etage</th>
+                                    <th>id_bloc</th>
+                                    <th colspan="2"></th>                              
                                 </tr>
                         </thead>
                         
@@ -27,13 +27,20 @@
                             foreach ($res as $obj) {
                             ?>
                                 <tr>
-                                 <td><?php echo $obj->id_salle ?></td>
-                                 <td><?php echo $obj->nb_lit ?></td>
-                                 <td><?php echo $obj->etage ?></td>
-                                 <td><?php echo $obj->id_bloc ?></td>
-                                 <td>
-                                   <button type="button"> <a  href="index.php?controller=salle&action=delete&id_salle=<?php echo $obj->id_salle;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a></button>
-                                   <button type="button"> <a  href="index.php?controller=salle&action=edit1&id_salle=<?php echo $obj->id_salle;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a></button></td>                              
+                                    <td><?php echo $obj->id_salle ?></td>
+                                    <td><?php echo $obj->nb_lit ?></td>
+                                    <td><?php echo $obj->etage ?></td>
+                                    <td><?php echo $obj->id_bloc ?></td>
+                                    <td style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=salle&action=delete&id_salle=<?php echo $obj->id_salle;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
+                                        </button>
+                                    </td>
+                                    <td  style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=salle&action=edit1&id_salle=<?php echo $obj->id_salle;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
+                                        </button> 
+                                    </td>                              
                                 </tr>
                             <?php
                                 }

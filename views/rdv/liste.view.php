@@ -14,12 +14,12 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                               <th>id_rdv</th>
-                               <th>date_rdv</th>
-                               <th>patient</th>
-                               <th>maladie</th>
-                               <th>employeur</th>
-                               <th></th>                              
+                                    <th>id_rdv</th>
+                                    <th>date_rdv</th>
+                                    <th>patient</th>
+                                    <th>maladie</th>
+                                    <th>employeur</th>
+                                    <th colspan="2"></th>                              
                                 </tr>
                         </thead>
                         
@@ -28,14 +28,21 @@
                             foreach ($res as $obj) {
                             ?>
                                 <tr>
-                                 <td><?php echo $obj->id_rdv ?></td>
-                                 <td><?php echo $obj->date_rdv ?></td>
-                                 <td><?php echo $obj->patient ?></td>
-                                 <td><?php echo $obj->maladie ?></td>
-                                 <td><?php echo $obj->employeur ?></td>
-                                 <td>
-                                   <button type="button"> <a  href="index.php?controller=rdv&action=delete&id_rdv=<?php echo $obj->id_rdv;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a></button>
-                                   <button type="button"> <a  href="index.php?controller=rdv&action=edit1&id_rdv=<?php echo $obj->id_rdv;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a></button></td>                              
+                                    <td><?php echo $obj->id_rdv ?></td>
+                                    <td><?php echo $obj->date_rdv ?></td>
+                                    <td><?php echo $obj->patient ?></td>
+                                    <td><?php echo $obj->maladie ?></td>
+                                    <td><?php echo $obj->employeur ?></td>
+                                    <td style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=rdv&action=delete&id_rdv=<?php echo $obj->id_rdv;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
+                                        </button>
+                                    </td>
+                                    <td  style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=rdv&action=edit1&id_rdv=<?php echo $obj->id_rdv;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
+                                        </button> 
+                                    </td>                              
                                 </tr>
                             <?php
                                 }

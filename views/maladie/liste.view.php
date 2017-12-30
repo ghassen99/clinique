@@ -14,10 +14,10 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                               <th>id_m</th>
-                               <th>lib_m</th>
-                               <th>bloc</th>
-                               <th></th>                              
+                                    <th>id_m</th>
+                                    <th>lib_m</th>
+                                    <th>bloc</th>
+                                    <th colspan="2"></th>                              
                                 </tr>
                         </thead>
                         
@@ -26,12 +26,19 @@
                             foreach ($res as $obj) {
                             ?>
                                 <tr>
-                                 <td><?php echo $obj->id_m ?></td>
-                                 <td><?php echo $obj->lib_m ?></td>
-                                 <td><?php echo $obj->bloc ?></td>
-                                 <td>
-                                   <button type="button"> <a  href="index.php?controller=maladie&action=delete&id_m=<?php echo $obj->id_m;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a></button>
-                                   <button type="button"> <a  href="index.php?controller=maladie&action=edit1&id_m=<?php echo $obj->id_m;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a></button></td>                              
+                                    <td><?php echo $obj->id_m ?></td>
+                                    <td><?php echo $obj->lib_m ?></td>
+                                    <td><?php echo $obj->bloc ?></td>
+                                    <td style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=maladie&action=delete&id_m=<?php echo $obj->id_m;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
+                                        </button>
+                                    </td>
+                                    <td  style="width:10px;">
+                                        <button type="button"> 
+                                            <a  href="index.php?controller=maladie&action=edit1&id_m=<?php echo $obj->id_m;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
+                                        </button> 
+                                    </td>                              
                                 </tr>
                             <?php
                                 }
