@@ -27,10 +27,18 @@
                               where cin_emp = '".$this->cin_emp."'  
                               and password like'".$this->password."'");
             $verif=$req->rowCount();
+            $res=$req->fetchAll();
+            
             if($verif==1)
             {
               $_SESSION['login']=$this->cin_emp;
               $_SESSION['pass']=$this->password;
+              
+              foreach($res as $vs){
+                $_SESSION['nom_emp'] = $vs['nom_emp'];
+                $_SESSION['pren_emp'] = $vs['pren_emp'];
+              }
+              
               $this->redirect("index.php");
             }else
               $this->redirect("login.php");

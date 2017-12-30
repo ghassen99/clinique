@@ -61,12 +61,19 @@
 
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
-                <div class="profile_pic">
-                    <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-                </div>
+
                 <div class="profile_info">
-                    <span>Welcome,</span>
-                    <h2>John Doe</h2>
+                    <h2>
+                        <span style="font-size: 25px;color:#FFFFFF"><b>Bienvenue</b></span>
+                        <span style="font-size: 15px;"><b>
+                            <?php
+                                if (!isset($_SESSION))
+                                    session_start();
+                                echo $_SESSION['nom_emp'].' '.$_SESSION['pren_emp'];
+                            ?>
+                            </b>
+                        </span>
+                    </h2>
                 </div>
                 <div class="clearfix"></div>
                 </div>
@@ -79,23 +86,24 @@
                 <div class="menu_section">
                     <h3>General</h3>
                     <ul class="nav side-menu">
-                    <li><a href="index.php?controller=index&action=index"><i class="fa fa-home"></i> dashboard</a></li>                      
-                    
-                    <li><a href="index.php?controller=bloc&action=liste"><i class="fa fa-chevron-circle-right"></i> bloc</a></li>
-                    
-                    <li><a href="index.php?controller=employeur&action=liste"><i class="fa fa-chevron-circle-right"></i> employeur</a></li>
-                    
-                    <li><a href="index.php?controller=fonction&action=liste"><i class="fa fa-chevron-circle-right"></i> fonction</a></li>
-                    
-                    <li><a href="index.php?controller=maladie&action=liste"><i class="fa fa-chevron-circle-right"></i> maladie</a></li>
-                    
-                    <li><a href="index.php?controller=patient&action=liste"><i class="fa fa-chevron-circle-right"></i> patient</a></li>
-                    
-                    <li><a href="index.php?controller=rdv&action=liste"><i class="fa fa-chevron-circle-right"></i> rdv</a></li>
-                    
-                    <li><a href="index.php?controller=salle&action=liste"><i class="fa fa-chevron-circle-right"></i> salle</a></li>
-                    
-                    <li><a href="index.php?controller=specialite&action=liste"><i class="fa fa-chevron-circle-right"></i> specialite</a></li>
+                
+                        <li><a href="index.php?controller=index&action=index"><i class="fa fa-home"></i> dashboard</a></li>                      
+                        
+                        <li><a href="index.php?controller=bloc&action=liste"><i class="fa fa-chevron-circle-right"></i> bloc</a></li>
+                        
+                        <li><a href="index.php?controller=employeur&action=liste"><i class="fa fa-chevron-circle-right"></i> employeur</a></li>
+                        
+                        <li><a href="index.php?controller=fonction&action=liste"><i class="fa fa-chevron-circle-right"></i> fonction</a></li>
+                        
+                        <li><a href="index.php?controller=maladie&action=liste"><i class="fa fa-chevron-circle-right"></i> maladie</a></li>
+                        
+                        <li><a href="index.php?controller=patient&action=liste"><i class="fa fa-chevron-circle-right"></i> patient</a></li>
+                        
+                        <li><a href="index.php?controller=rdv&action=liste"><i class="fa fa-chevron-circle-right"></i> rdv</a></li>
+                        
+                        <li><a href="index.php?controller=salle&action=liste"><i class="fa fa-chevron-circle-right"></i> salle</a></li>
+                        
+                        <li><a href="index.php?controller=specialite&action=liste"><i class="fa fa-chevron-circle-right"></i> specialite</a></li>
                     
                     </ul>
                 </div>
@@ -116,20 +124,18 @@
                 </div>
 
                 <ul class="nav navbar-nav navbar-right">
+                
                     <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <img src="images/img.jpg" alt="">John Doe
+                        <?php
+                            if (!isset($_SESSION))
+                                session_start();
+                                echo $_SESSION['nom_emp'].' '.$_SESSION['pren_emp'];
+                        ?>
                         <span class=" fa fa-angle-down"></span>
                     </a>
+                
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="javascript:;"> Profile</a></li>
-                        <li>
-                        <a href="javascript:;">
-                            <span class="badge bg-red pull-right">50%</span>
-                            <span>Settings</span>
-                        </a>
-                        </li>
-                        <li><a href="javascript:;">Help</a></li>
                         <li><a href="index.php?controller=login&action=logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                     </ul>
                     </li>
