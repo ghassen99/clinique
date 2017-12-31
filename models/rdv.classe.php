@@ -35,7 +35,6 @@
             return $resultat;
         }
 
-        
         //méthode d'affichage (par id)
         public function listWhereId($cnx){	
             $resultat=$cnx->query("select * from rdv where id_rdv='".$this->id_rdv."'")->fetch(PDO::FETCH_OBJ) ;		
