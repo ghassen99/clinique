@@ -22,10 +22,12 @@
 
         //methode login
         public function login($cnx){
-            $req=$cnx->query("select * 
-                              from employeur 
-                              where cin_emp = '".$this->cin_emp."'  
-                              and password like'".$this->password."'");
+            $req=$cnx->query("select  e.*, f.lib_f 
+                              from    employeur e, fonction f
+                              where   cin_emp = '".$this->cin_emp."'  
+                              and     password like'".$this->password."'
+                              and     e.fonction = f.id_f
+                            ");
             $verif=$req->rowCount();
             $res=$req->fetchAll();
             
@@ -38,6 +40,7 @@
                 $_SESSION['id_emp'] = $vs['id_emp'];
                 $_SESSION['nom_emp'] = $vs['nom_emp'];
                 $_SESSION['pren_emp'] = $vs['pren_emp'];
+                $_SESSION['fonction'] = $vs['lib_f'];
               }
               
               $this->redirect("index.php");

@@ -16,7 +16,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Libellé</th>
-                                    <th>bloc</th>
+                                    <th>Département</th>
                                     <th></th>
                                     <th></th>                              
                                 </tr>

@@ -2,7 +2,7 @@
         <div class="">
         <div class="page-title">
             <div class="title_left">
-            <h3>Détails du bloc</h3>
+            <h3>Détails du Département</h3>
             </div>
 
             <div class="title_right">

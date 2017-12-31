@@ -87,23 +87,29 @@
                     <h3>General</h3>
                     <ul class="nav side-menu">
                 
-                        <li><a href="index.php?controller=index&action=index"><i class="fa fa-home"></i> dashboard</a></li>                      
+                        <li><a href="index.php?controller=index&action=index"><i class="fa fa-home"></i> Dashboard</a></li>                      
+                        <?php 
+                            if ($_SESSION['fonction'] == 'administrateur'){
+                        ?>
+                        <li><a href="index.php?controller=bloc&action=liste"><i class="fa fa-university"></i> Département</a></li>
+
+                        <li><a href="index.php?controller=salle&action=liste"><i class="fa  fa-bank"></i> Salle</a></li>
+
+                        <li><a href="index.php?controller=employeur&action=liste"><i class="fa fa-user"></i> Employeur</a></li>
                         
-                        <li><a href="index.php?controller=bloc&action=liste"><i class="fa fa-chevron-circle-right"></i> bloc</a></li>
+                        <li><a href="index.php?controller=specialite&action=liste"><i class="fa fa-user-md"></i> Specialite</a></li>
+
+                        <li><a href="index.php?controller=fonction&action=liste"><i class="fa fa-briefcase"></i> Fonction</a></li>
                         
-                        <li><a href="index.php?controller=employeur&action=liste"><i class="fa fa-chevron-circle-right"></i> employeur</a></li>
+                        <li><a href="index.php?controller=maladie&action=liste"><i class="fa fa-stethoscope"></i> Maladie</a></li>
+                                                
+                        <?php 
+                          }
+                        ?>
+                        <li><a href="index.php?controller=patient&action=liste"><i class="fa fa-wheelchair"></i>    Patient</a></li>
                         
-                        <li><a href="index.php?controller=fonction&action=liste"><i class="fa fa-chevron-circle-right"></i> fonction</a></li>
+                        <li><a href="index.php?controller=rdv&action=liste"><i class="fa fa-calendar"></i> Randez-vous</a></li>
                         
-                        <li><a href="index.php?controller=maladie&action=liste"><i class="fa fa-chevron-circle-right"></i> maladie</a></li>
-                        
-                        <li><a href="index.php?controller=patient&action=liste"><i class="fa fa-chevron-circle-right"></i> patient</a></li>
-                        
-                        <li><a href="index.php?controller=rdv&action=liste"><i class="fa fa-chevron-circle-right"></i> rdv</a></li>
-                        
-                        <li><a href="index.php?controller=salle&action=liste"><i class="fa fa-chevron-circle-right"></i> salle</a></li>
-                        
-                        <li><a href="index.php?controller=specialite&action=liste"><i class="fa fa-chevron-circle-right"></i> specialite</a></li>
                     
                     </ul>
                 </div>

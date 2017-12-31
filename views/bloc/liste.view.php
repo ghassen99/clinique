@@ -6,7 +6,7 @@
                     <p class="text-muted font-13 m-b-30">
                         <form method="post" action="index.php?controller=bloc&action=ajout1">
                             <h1>
-                                Liste des blocs 
+                                Liste des Départements 
                                 <i style="font-size:24px;color:green" class="fa"><button type="submit">&#xf067;</button></i>
                             </h1>
                         </form>

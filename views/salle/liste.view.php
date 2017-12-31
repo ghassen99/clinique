@@ -17,7 +17,7 @@
                                     <th>ID</th>
                                     <th>Nombre des lits</th>
                                     <th>Etage</th>
-                                    <th>Bloc</th>
+                                    <th>Département</th>
                                     <th></th>
                                     <th></th>                              
                                 </tr>

@@ -37,7 +37,7 @@
                 <!-- bloc -->
                 <div class="item form-group">
                     <label class="control-label col-md-3" for="name">
-                    bloc <span class="required">*</span>
+                    Département <span class="required">*</span>
                     </label>
                     <span class="col-md-6">
                         <select class="form-control col-md-7 col-xs-12" name="bloc" id="bloc">

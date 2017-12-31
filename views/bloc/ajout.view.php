@@ -7,7 +7,7 @@
         <div class="">
         <div class="page-title">
             <div class="title_left">
-            <h3>Nouveau bloc</h3>
+            <h3>Nouveau Département</h3>
             </div>
 
             <div class="title_right">
