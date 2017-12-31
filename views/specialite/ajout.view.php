@@ -7,7 +7,7 @@
         <div class="">
         <div class="page-title">
             <div class="title_left">
-            <h3>Nouveau specialite</h3>
+            <h3>Nouvelle specialité</h3>
             </div>
 
             <div class="title_right">
@@ -23,15 +23,15 @@
 
                 <form  method="post" action="index.php?controller=specialite&action=ajout" class="form-horizontal form-label-left" novalidate >
                     
-                                    <!-- lib_spec -->
-                                    <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                        lib_spec <span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="lib_spec" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_spec" placeholder="lib_spec" required="required" type="text">
-                                        </div>
-                                    </div>
+                    <!-- lib_spec -->
+                    <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                        Libellé <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="lib_spec" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_spec" placeholder="Libellé" required="required" type="text">
+                        </div>
+                    </div>
                                 
                     <div class="ln_solid"></div>
                     <div class="form-group">

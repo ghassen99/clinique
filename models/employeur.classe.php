@@ -29,7 +29,9 @@
         
         //méthode d'affichage
         public function liste($cnx){	
-            $resultat=$cnx->query("select * from employeur")->fetchAll(PDO::FETCH_OBJ) ;		
+            $resultat=$cnx->query("select   e.*, f.lib_f
+                                   from     employeur e, fonction f
+                                   where    e.fonction = f.id_f")->fetchAll(PDO::FETCH_OBJ) ;		
             return $resultat;
         }
         

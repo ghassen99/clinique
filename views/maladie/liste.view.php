@@ -14,10 +14,11 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                                    <th>id_m</th>
-                                    <th>lib_m</th>
+                                    <th>ID</th>
+                                    <th>Libellé</th>
                                     <th>bloc</th>
-                                    <th colspan="2"></th>                              
+                                    <th></th>
+                                    <th></th>                              
                                 </tr>
                         </thead>
                         
@@ -28,7 +29,7 @@
                                 <tr>
                                     <td><?php echo $obj->id_m ?></td>
                                     <td><?php echo $obj->lib_m ?></td>
-                                    <td><?php echo $obj->bloc ?></td>
+                                    <td><?php echo $obj->lib_bloc ?></td>
                                     <td style="width:10px;">
                                         <button type="button"> 
                                             <a  href="index.php?controller=maladie&action=delete&id_m=<?php echo $obj->id_m;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>

@@ -14,14 +14,15 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                                    <th>id_p</th>
-                                    <th>nom_p</th>
-                                    <th>prenom_p</th>
-                                    <th>cin_p</th>
-                                    <th>naissance_p</th>
-                                    <th>adresse</th>
-                                    <th>tel_p</th>
-                                    <th colspan="2"></th>                              
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>CIN</th>
+                                    <th>Date de naissance</th>
+                                    <th>Adresse</th>
+                                    <th>Numéro de téléphone</th>
+                                    <th></th>
+                                    <th></th>                           
                                 </tr>
                         </thead>
                         

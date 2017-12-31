@@ -21,7 +21,9 @@
         
         //méthode d'affichage
         public function liste($cnx){	
-            $resultat=$cnx->query("select * from fonction")->fetchAll(PDO::FETCH_OBJ) ;		
+            $resultat=$cnx->query("select   f.*, s.lib_spec
+                                   from     fonction f, specialite s
+                                   where    f.specialite = s.id_spec")->fetchAll(PDO::FETCH_OBJ) ;		
             return $resultat;
         }
         

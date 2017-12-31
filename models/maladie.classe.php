@@ -21,7 +21,9 @@
         
         //méthode d'affichage
         public function liste($cnx){	
-            $resultat=$cnx->query("select * from maladie")->fetchAll(PDO::FETCH_OBJ) ;		
+            $resultat=$cnx->query("select   m.*, b.lib_bloc
+                                   from     maladie m, bloc b
+                                   where    m.bloc = b.id_bloc")->fetchAll(PDO::FETCH_OBJ) ;		
             return $resultat;
         }
         

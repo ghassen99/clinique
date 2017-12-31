@@ -7,7 +7,7 @@
         <div class="">
         <div class="page-title">
             <div class="title_left">
-            <h3>Nouveau salle</h3>
+            <h3>Nouvelle salle</h3>
             </div>
 
             <div class="title_right">
@@ -26,33 +26,33 @@
                                     <!-- nb_lit -->
                                     <div class="item form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                        nb_lit <span class="required">*</span>
+                                            Nombre des lits <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="nb_lit" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nb_lit" placeholder="nb_lit" required="required" type="text">
+                                            <input id="nb_lit" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nb_lit" placeholder="Nombre des lits" required="required" type="text">
                                         </div>
                                     </div>
                                 
                                     <!-- etage -->
                                     <div class="item form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                        etage <span class="required">*</span>
+                                        Etage <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="etage" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="etage" placeholder="etage" required="required" type="text">
+                                            <input id="etage" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="etage" placeholder="Etage" required="required" type="text">
                                         </div>
                                     </div>
                                 
                                 <!-- id_bloc -->
                                 <div class="item form-group">
                                     <label class="control-label col-md-3" for="name">
-                                    id_bloc <span class="required">*</span>
+                                    Bloc <span class="required">*</span>
                                     </label>
                                     <span class="col-md-6">
                                         <select class="form-control col-md-7 col-xs-12" name="id_bloc" id="id_bloc">
                                         <?php
                                         foreach($res_bloc as $obj){
-                                            echo "<option value=".$obj->id_bloc.">".$obj->id_bloc."</options>";   
+                                            echo "<option value=".$obj->id_bloc.">".$obj->lib_bloc."</options>";   
                                         }
                                         ?>
                                         </select>   
@@ -62,10 +62,10 @@
                             
                     <div class="ln_solid"></div>
                     <div class="form-group">
-                    <div class="col-md-6 col-md-offset-3">
-                        <button id="send" type="submit" class="btn btn-success">Submit</button>
-                        <button type="reset" class="btn btn-primary">Cancel</button>
-                    </div>
+                        <div class="col-md-6 col-md-offset-3">
+                            <button id="send" type="submit" class="btn btn-success">Submit</button>
+                            <button type="reset" class="btn btn-primary">Cancel</button>
+                        </div>
                     </div>
                 </form>
                 </div>

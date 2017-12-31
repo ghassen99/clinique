@@ -25,9 +25,16 @@
         
         //méthode d'affichage
         public function liste($cnx){	
-            $resultat=$cnx->query("select * from rdv")->fetchAll(PDO::FETCH_OBJ) ;		
+            $resultat=$cnx->query("select   rdv.*, p.*, e.*, m.*, f.lib_f
+                                   from     rdv, patient p, employeur e, maladie m, fonction f
+                                   where    rdv.patient = p.id_p
+                                   and      rdv.maladie = m.id_m
+                                   and      rdv.employeur = e.id_emp
+                                   and      e.fonction = f.id_f
+                                  ")->fetchAll(PDO::FETCH_OBJ) ;		
             return $resultat;
         }
+
         
         //méthode d'affichage (par id)
         public function listWhereId($cnx){	
@@ -45,6 +52,7 @@
         public function  edit($cnx){
             $cnx->exec("update rdv set date_rdv='".$this->date_rdv."', patient='".$this->patient."', maladie='".$this->maladie."', employeur='".$this->employeur."' 
                 where id_rdv='".$this->id_rdv."'");
+                
             $this->redirect("index.php?controller=rdv&action=liste");
         }
         

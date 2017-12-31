@@ -14,14 +14,14 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                                    <th>id_emp</th>
-                                    <th>nom_emp</th>
-                                    <th>pren_emp</th>
-                                    <th>cin_emp</th>
-                                    <th>password</th>
-                                    <th>naiss_emp</th>
-                                    <th>fonction</th>
-                                    <th colspan="2"></th>                              
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>CIN</th>
+                                    <th>Date de naissance</th>
+                                    <th>Fonction</th>
+                                    <th></th>
+                                    <th></th>                             
                                 </tr>
                         </thead>
                         
@@ -34,9 +34,8 @@
                                     <td><?php echo $obj->nom_emp ?></td>
                                     <td><?php echo $obj->pren_emp ?></td>
                                     <td><?php echo $obj->cin_emp ?></td>
-                                    <td><?php echo $obj->password ?></td>
                                     <td><?php echo $obj->naiss_emp ?></td>
-                                    <td><?php echo $obj->fonction ?></td>
+                                    <td><?php echo $obj->lib_f ?></td>
                                     <td style="width:10px;">
                                         <button type="button"> 
                                             <a  href="index.php?controller=employeur&action=delete&id_emp=<?php echo $obj->id_emp;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>

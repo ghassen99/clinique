@@ -26,10 +26,10 @@
                                     <!-- lib_bloc -->
                                     <div class="item form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                        lib_bloc <span class="required">*</span>
+                                        Libellé <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="lib_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_bloc" placeholder="lib_bloc" required="required" type="text">
+                                            <input id="lib_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_bloc" placeholder="Libellé" required="required" type="text">
                                         </div>
                                     </div>
                                 

@@ -14,9 +14,10 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                                    <th>id_bloc</th>
-                                    <th>lib_bloc</th>
-                                    <th colspan="2"></th>                              
+                                    <th>ID</th>
+                                    <th>Libéllé</th>
+                                    <th></th>
+                                    <th></th>                             
                                 </tr>
                         </thead>
                         

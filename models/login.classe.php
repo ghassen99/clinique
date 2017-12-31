@@ -35,6 +35,7 @@
               $_SESSION['pass']=$this->password;
               
               foreach($res as $vs){
+                $_SESSION['id_emp'] = $vs['id_emp'];
                 $_SESSION['nom_emp'] = $vs['nom_emp'];
                 $_SESSION['pren_emp'] = $vs['pren_emp'];
               }

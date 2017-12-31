@@ -8,6 +8,7 @@
     $pren_emp='';
     $cin_emp='';
     $password='';
+    $conf_password='';
     $naiss_emp='';
     $fonction='';
     //initialisation des attributs de l’objet fonction
@@ -25,7 +26,9 @@
     if(isset($_REQUEST['cin_emp'])) 
         $cin_emp=$_REQUEST['cin_emp'];
     if(isset($_REQUEST['password'])) 
-        $password=$_REQUEST['password'];
+        $password=$_REQUEST['password'];    
+    if(isset($_REQUEST['conf_password'])) 
+    $conf_password=$_REQUEST['conf_password'];
     if(isset($_REQUEST['naiss_emp'])){
         $naiss_emp=$_REQUEST['naiss_emp'];
         $tab = explode('/',$naiss_emp);
@@ -33,34 +36,52 @@
     }
     if(isset($_REQUEST['fonction'])) 
         $fonction=$_REQUEST['fonction'];
-    
-    //instanciation de l’objet employeur
-    $employeur=new employeur($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonction);
-    
-    //instanciation de l’objet fonction (clé étrangére)
-    $fonction=new fonction($id_f,$lib_f,$specialite);
-    
-    switch($action){
-        case 'ajout1' : $res_fonction=$fonction->liste($cnx);
-                        include 'views/employeur/ajout.view.php';
-                        break;
 
-        case 'ajout' :  $employeur->ajout($cnx);
-                        break;
-
-        case 'liste':   $res=$employeur->liste($cnx);
-                        include 'views/employeur/liste.view.php';
-                        break;
-            
-        case 'edit1':   $res_fonction=$fonction->liste($cnx);
-                        $res_employeur=$employeur->listWhereId($cnx);
-                        include 'views/employeur/edit.view.php';
-                        break;
-            
-        case 'edit':    $employeur->edit($cnx);
-                        break;
-            
-        case 'delete':  $employeur->delete($cnx);
-                        break;  
+    if ($conf_password != $password){
+        ?>
+            <div class="alert alert-danger alert-dismissable fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Erreur!</strong> Les deux mots de passe ne sont pas identiques.
+            </div>  
+        <?php
+        
+        if ($action == "edit"){
+            $action = "edit1";
+        }else{
+            $action = "ajout1";
+        }
     }
+    
+        //instanciation de l’objet employeur
+        $employeur=new employeur($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonction);
+
+        //instanciation de l’objet fonction (clé étrangére)
+        $fonction=new fonction($id_f,$lib_f,$specialite);
+        
+        switch($action){
+            case 'ajout1' : $res_fonction=$fonction->liste($cnx);
+                            include 'views/employeur/ajout.view.php';
+                            break;
+
+            case 'ajout' :  
+           
+                            $employeur->ajout($cnx);
+                            break;
+
+            case 'liste':   $res=$employeur->liste($cnx);
+                            include 'views/employeur/liste.view.php';
+                            break;
+                
+            case 'edit1':   $res_fonction=$fonction->liste($cnx);
+                            $res_employeur=$employeur->listWhereId($cnx);
+                            include 'views/employeur/edit.view.php';
+                            break;
+                
+            case 'edit':    $employeur->edit($cnx);
+                            break;
+                
+            case 'delete':  $employeur->delete($cnx);
+                            break;  
+        }
+    
 ?>

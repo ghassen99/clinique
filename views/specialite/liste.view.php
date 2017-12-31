@@ -6,7 +6,7 @@
                     <p class="text-muted font-13 m-b-30">
                         <form method="post" action="index.php?controller=specialite&action=ajout1">
                             <h1>
-                                Liste des specialites 
+                                Liste des specialités 
                                 <i style="font-size:24px;color:green" class="fa"><button type="submit">&#xf067;</button></i>
                             </h1>
                         </form>
@@ -14,9 +14,10 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                                    <th>id_spec</th>
-                                    <th>lib_spec</th>
-                                    <th colspan="2"></th>                              
+                                    <th>ID</th>
+                                    <th>Libellé</th>
+                                    <th></th>
+                                    <th></th>                             
                                 </tr>
                         </thead>
                         

@@ -23,7 +23,10 @@
         
         //méthode d'affichage
         public function liste($cnx){	
-            $resultat=$cnx->query("select * from salle")->fetchAll(PDO::FETCH_OBJ) ;		
+            $resultat=$cnx->query("select   s.*, b.lib_bloc
+                                   from     salle s, bloc b
+                                   where    s.id_bloc = b.id_bloc
+                                  ")->fetchAll(PDO::FETCH_OBJ) ;		
             return $resultat;
         }
         
