@@ -10,7 +10,9 @@
     $password='';
     $conf_password='';
     $naiss_emp='';
-    $fonction='';
+    $fonc='';
+    $tel_emp='';
+    $photo='';
     //initialisation des attributs de l’objet fonction
     $id_f='';
     $lib_f='';
@@ -35,7 +37,7 @@
         $naiss_emp = $tab[2]."-".$tab[0]."-".$tab[1];
     }
     if(isset($_REQUEST['fonction'])) 
-        $fonction=$_REQUEST['fonction'];
+        $fonc=$_REQUEST['fonction'];
 
     if ($conf_password != $password){
         ?>
@@ -52,8 +54,13 @@
         }
     }
     
+    if(isset($_REQUEST['tel_emp'])) 
+        $tel_emp=$_REQUEST['tel_emp'];
+
+    if(isset($_REQUEST['photo'])) 
+        $photo=$_REQUEST['photo'];    
         //instanciation de l’objet employeur
-        $employeur=new employeur($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonction);
+        $employeur=new employeur($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonc,$tel_emp,$photo);
 
         //instanciation de l’objet fonction (clé étrangére)
         $fonction=new fonction($id_f,$lib_f,$specialite);
@@ -63,9 +70,7 @@
                             include 'views/employeur/ajout.view.php';
                             break;
 
-            case 'ajout' :  
-           
-                            $employeur->ajout($cnx);
+            case 'ajout' :  $employeur->ajout($cnx);
                             break;
 
             case 'liste':   $res=$employeur->liste($cnx);

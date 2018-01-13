@@ -52,27 +52,22 @@
                             <input id="cin_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="cin_emp" placeholder="CIN" required="required" type="text">
                         </div>
                     </div>
-                
-                    <!-- password -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        mot de passe <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="password" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="password" placeholder="mot de passe" required="required" type="password">
-                        </div>
-                    </div>
 
-                    <!-- confirm password -->
+                    <!-- photo -->
                     <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        confirmer votre mot de passe <span class="required">*</span>
+                    <div class="col-md-3"></div>
+                    <div class="col-lg-6 col-sm-6 col-12">
+                    <div class="input-group">
+                        <label class="input-group-btn">
+                            <span class="btn btn-primary">
+                                Choisir une photo <input type="file" name="photo" id="photo" style="display: none;" multiple>
+                            </span>
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="conf_password" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="conf_password" placeholder="confirmer votre mot de passe" required="required" type="password">
-                        </div>
-                    </div>                                    
-                                            
+                        <input type="text" name="photo" id="photo" class="form-control" >
+                    </div>
+                    </div>  
+                    </div> 
+                       
                     <!-- naiss_emp -->
                     <div class="item form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
@@ -111,6 +106,38 @@
                         </span>
 
                     </div>
+
+                    <!-- tel_emp -->
+                    <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                        Numéro de téléphone <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="tel_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="tel_emp" placeholder="Numéro de téléphone" required="required" type="text">
+                        </div>
+                    </div>
+                
+                    <!-- password -->
+                    <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                        mot de passe <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="password" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="password" placeholder="mot de passe" required="required" type="password">
+                        </div>
+                    </div>
+
+                    <!-- confirm password -->
+                    <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                        confirmer votre mot de passe <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="conf_password" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="conf_password" placeholder="confirmer votre mot de passe" required="required" type="password">
+                        </div>
+                    </div>                                    
+                     
+       
                             
                     <div class="ln_solid"></div>
                     <div class="form-group">
