@@ -53,21 +53,16 @@
                         </div>
                     </div>
 
+
                     <!-- photo -->
                     <div class="item form-group">
-                    <div class="col-md-3"></div>
-                    <div class="col-lg-6 col-sm-6 col-12">
-                    <div class="input-group">
-                        <label class="input-group-btn">
-                            <span class="btn btn-primary">
-                                Choisir une photo <input type="file" name="photo" id="photo" style="display: none;" multiple>
-                            </span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                            Photo <span class="required">*</span>
                         </label>
-                        <input type="text" name="photo" id="photo" class="form-control" >
+                        <input type="file" id="photo" name="photo" />
+                        
                     </div>
-                    </div>  
-                    </div> 
-                       
+
                     <!-- naiss_emp -->
                     <div class="item form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">

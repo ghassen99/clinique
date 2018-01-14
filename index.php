@@ -49,35 +49,118 @@
         <link href="asset/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
         <!-- bootstrap-datetimepicker -->
         <link href="asset/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
-        <script>
-            $(function() {
 
-            // We can attach the `fileselect` event to all file inputs on the page
-            $(document).on('change', ':file', function() {
-            var input = $(this),
-                numFiles = input.get(0).files ? input.get(0).files.length : 1,
-                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-            input.trigger('fileselect', [numFiles, label]);
-            });
 
-            // We can watch for our custom `fileselect` event like this
-            $(document).ready( function() {
-                $(':file').on('fileselect', function(event, numFiles, label) {
 
-                    var input = $(this).parents('.input-group').find(':text'),
-                        log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-                    if( input.length ) {
-                        input.val(log);
-                    } else {
-                        if( log ) alert(log);
-                    }
-
+        <style>
+/*
+            .fileUpload {
+                position: relative;
+                overflow: hidden;
+                margin: 10px;
+            }
+            .fileUpload input.upload {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                cursor: pointer;
+                opacity: 0;
+                filter: alpha(opacity=0);
+            }
+*/
+.table-sortable tbody tr {
+    cursor: move;
+}
+        </style>
+<script>
+$(document).ready(function() {
+    $("#add_row").on("click", function() {
+        // Dynamic Rows Code
+        
+        // Get max row id and set new id
+        var newid = 0;
+        $.each($("#tab_logic tr"), function() {
+            if (parseInt($(this).data("id")) > newid) {
+                newid = parseInt($(this).data("id"));
+            }
+        });
+        newid++;
+        
+        var tr = $("<tr></tr>", {
+            id: "addr"+newid,
+            "data-id": newid
+        });
+        
+        // loop through each td and create new elements with name of newid
+        $.each($("#tab_logic tbody tr:nth(0) td"), function() {
+            var cur_td = $(this);
+            
+            var children = cur_td.children();
+            
+            // add new td and element if it has a nane
+            if ($(this).data("name") != undefined) {
+                var td = $("<td></td>", {
+                    "data-name": $(cur_td).data("name")
                 });
-            });
+                
+                var c = $(cur_td).find($(children[0]).prop('tagName')).clone().val("");
+                c.attr("name", $(cur_td).data("name") + newid);
+                c.appendTo($(td));
+                td.appendTo($(tr));
+            } else {
+                var td = $("<td></td>", {
+                    'text': $('#tab_logic tr').length
+                }).appendTo($(tr));
+            }
+        });
+        
+        // add delete button and td
+        /*
+        $("<td></td>").append(
+            $("<button class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>")
+                .click(function() {
+                    $(this).closest("tr").remove();
+                })
+        ).appendTo($(tr));
+        */
+        
+        // add the new row
+        $(tr).appendTo($('#tab_logic'));
+        
+        $(tr).find("td button.row-remove").on("click", function() {
+             $(this).closest("tr").remove();
+        });
+});
 
-            });
-        </script>
+
+
+
+    // Sortable Code
+    var fixHelperModified = function(e, tr) {
+        var $originals = tr.children();
+        var $helper = tr.clone();
+    
+        $helper.children().each(function(index) {
+            $(this).width($originals.eq(index).width())
+        });
+        
+        return $helper;
+    };
+  
+    $(".table-sortable tbody").sortable({
+        helper: fixHelperModified      
+    }).disableSelection();
+
+    $(".table-sortable thead").disableSelection();
+
+
+
+    $("#add_row").trigger("click");
+});
+</script>
     </head>
     
     <body class="nav-md">
@@ -316,6 +399,39 @@
         });
     </script>
 
+<script>
+
+function bs_input_file() {
+	$(".input-file").before(
+		function() {
+			if ( ! $(this).prev().hasClass('input-ghost') ) {
+				var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+				element.attr("name",$(this).attr("name"));
+				element.change(function(){
+					element.next(element).find('input').val((element.val()).split('\\').pop());
+				});
+				$(this).find("button.btn-choose").click(function(){
+					element.click();
+				});
+				$(this).find("button.btn-reset").click(function(){
+					element.val(null);
+					$(this).parents(".input-file").find('input').val('');
+				});
+				$(this).find('input').css("cursor","pointer");
+				$(this).find('input').mousedown(function() {
+					$(this).parents('.input-file').prev().click();
+					return false;
+				});
+				return element;
+			}
+		}
+	);
+}
+$(function() {
+	bs_input_file();
+});
+
+</script>
     </body>
 
 

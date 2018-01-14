@@ -33,7 +33,7 @@
                                 <tr>
                                     <td>
                                     <div class="right col-sm-12 col-xs-5 text-center">
-                                        <img src="<?php echo $obj->photo ?>" alt="" class="img-circle img-responsive">
+                                        <img src="<?php echo 'files/'.$obj->photo ?>" alt="" class="img-circle img-responsive">
                                     </div>
                                         
                                     </td>

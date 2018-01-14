@@ -54,11 +54,28 @@
         }
     }
     
+
     if(isset($_REQUEST['tel_emp'])) 
         $tel_emp=$_REQUEST['tel_emp'];
 
     if(isset($_REQUEST['photo'])) 
         $photo=$_REQUEST['photo'];    
+
+    if(isset($_FILES['photo']) && $_FILES['photo']['error']==0){
+
+        if(isset($_REQUEST['modif']))
+            unlink("files/".$_REQUEST['modif']);
+    
+    
+        $photo=$_FILES['photo']['name'];
+
+        $tab=explode('.',$photo);
+        $photo=$tab[0]."_".$photo.".".$tab[1];
+        $tmp=$_FILES['photo']['tmp_name'];
+
+        copy($tmp,$photo);
+    }
+
         //instanciation de l’objet employeur
         $employeur=new employeur($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonc,$tel_emp,$photo);
 
