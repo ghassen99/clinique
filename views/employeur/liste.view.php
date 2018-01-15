@@ -31,12 +31,7 @@
                             foreach ($res as $obj) {
                             ?>
                                 <tr>
-                                    <td>
-                                    <div class="right col-sm-12 col-xs-5 text-center">
-                                        <img src="<?php echo 'files/'.$obj->photo ?>" alt="" class="img-circle img-responsive">
-                                    </div>
-                                        
-                                    </td>
+                                    <td></td>
                                     <td><?php echo $obj->nom_emp ?></td>
                                     <td><?php echo $obj->pren_emp ?></td>
                                     <td><?php echo $obj->cin_emp ?></td>

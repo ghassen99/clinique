@@ -54,24 +54,6 @@
                         </div>
                     </div>
 
-                    <!-- photo -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                        Photo <span class="required">*</span>
-                        </label>
-
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="input-group input-file" name="Fichier1">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default btn-choose" type="button">Choose</button>
-                                </span>
-                                <input type="text" value="<?php echo $res_employeur->photo; ?>" id="photo" name="photo" class="form-control" placeholder='Choose a file...' />
-                                <span class="input-group-btn">
-                                        <button class="btn btn-warning btn-reset" type="button">Reset</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- naiss_emp -->
                     <div class="item form-group">

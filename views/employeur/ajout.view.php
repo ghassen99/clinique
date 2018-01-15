@@ -54,15 +54,6 @@
                     </div>
 
 
-                    <!-- photo -->
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                            Photo <span class="required">*</span>
-                        </label>
-                        <input type="file" id="photo" name="photo" />
-                        
-                    </div>
-
                     <!-- naiss_emp -->
                     <div class="item form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">

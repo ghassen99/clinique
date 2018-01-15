@@ -22,7 +22,8 @@
                                     <th>Adresse</th>
                                     <th>Numéro de téléphone</th>
                                     <th></th>
-                                    <th></th>                           
+                                    <th></th>     
+                                    <th></th>                      
                                 </tr>
                         </thead>
                         
@@ -38,15 +39,15 @@
                                     <td><?php echo $obj->naissance_p ?></td>
                                     <td><?php echo $obj->adresse ?></td>
                                     <td><?php echo $obj->tel_p ?></td>
+                                   
                                     <td style="width:10px;">
-                                        <button type="button"> 
-                                            <a  href="index.php?controller=patient&action=delete&id_p=<?php echo $obj->id_p;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
-                                        </button>
+                                            <a class="btn btn-primary btn-xs"  href="index.php?controller=patient&action=view&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-folder"></i>Détails</a>
                                     </td>
+                                    <td style="width:10px;">
+                                            <a class="btn btn-info btn-xs" href="index.php?controller=patient&action=delete&id_p=<?php echo $obj->id_p;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
+                                    </td>                                    
                                     <td  style="width:10px;">
-                                        <button type="button"> 
-                                            <a  href="index.php?controller=patient&action=edit1&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
-                                        </button> 
+                                            <a class="btn btn-danger btn-xs" href="index.php?controller=patient&action=edit1&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-pencil"></i> Edit </a>
                                     </td>                              
                                 </tr>
                             <?php
