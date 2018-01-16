@@ -2,7 +2,11 @@
         <div class="">
         <div class="page-title">
             <div class="title_left">
-            <h3>Détails d'un rendez-vous</h3>
+            <h1>
+                <strong><font color="#4068A4">
+                    Détails d'un rendez-vous
+                </font></strong>
+            </h1> 
             </div>
 
             <div class="title_right">
@@ -56,17 +60,7 @@
                 <!-- patient -->
                 <div class="item form-group">
                     <label class="control-label col-md-1" for="name">
-                    patient <span class="required">*</span>
-                    <?php
-                        /*
-                        foreach($res_patient as $obj){
-                            if ($res_rdv->patient == $obj->id_p) // on va comparer id du table mere avec id de la table fille, et lorsqu'il sont identique on ajoute "selected" 
-                                echo "<option value=".$obj->id_p." selected>".$obj->id_p."</options>"; 
-                            else
-                                echo "<option value=".$obj->id_p.">".$obj->id_p."</options>";  
-                        }
-                        */
-                    ?>                    
+                    patient <span class="required">*</span>                
                     </label>
                     <span class="col-md-11">
                     <table id="datatable" class="table table-striped table-bordered">

@@ -6,7 +6,10 @@
                     <p class="text-muted font-13 m-b-30">
                         <form method="post" action="index.php?controller=fonction&action=ajout1">
                             <h1>
-                                Liste des fonctions 
+                                <strong><font color="#4068A4">
+                                    Liste des fonctions
+                                </font></strong>
+                                
                                 <i style="font-size:24px;color:green" class="fa"><button type="submit">&#xf067;</button></i>
                             </h1>
                         </form>
@@ -31,15 +34,11 @@
                                     <td><?php echo $obj->lib_f ?></td>
                                     <td><?php echo $obj->lib_spec ?></td>
                                     <td style="width:10px;">
-                                        <button type="button"> 
-                                            <a  href="index.php?controller=fonction&action=delete&id_f=<?php echo $obj->id_f;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
-                                        </button>
-                                    </td>
+                                            <a class="btn btn-info btn-xs" href="index.php?controller=fonction&action=delete&id_f=<?php echo $obj->id_f;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
+                                    </td>                                    
                                     <td  style="width:10px;">
-                                        <button type="button"> 
-                                            <a  href="index.php?controller=fonction&action=edit1&id_f=<?php echo $obj->id_f;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
-                                        </button> 
-                                    </td>                              
+                                            <a class="btn btn-danger btn-xs" href="index.php?controller=fonction&action=edit1&id_f=<?php echo $obj->id_f;?>"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>                             
                                 </tr>
                             <?php
                                 }

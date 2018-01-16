@@ -33,24 +33,29 @@
     $patient=new patient($id_p,$nom_p,$prenom_p,$cin_p,$naissance_p,$adresse,$tel_p);
     
     switch($action){
-        case 'ajout1' : include 'views/patient/ajout.view.php';
-                        break;
+        case 'ajout1'   :   include 'views/patient/ajout.view.php';
+                            break;
 
-        case 'ajout' :  $patient->ajout($cnx);
-                        break;
+        case 'ajout'    :   $patient->ajout($cnx);
+                            break;
 
-        case 'liste':   $res=$patient->liste($cnx);
-                        include 'views/patient/liste.view.php';
-                        break;
+        case 'details'  :   $res_patient=$patient->listWhereId($cnx);
+                            $res=$patient->details_patient($cnx);
+                            include 'views/patient/details.view.php';
+                            break;
+        
+        case 'liste'    :   $res=$patient->liste($cnx);
+                            include 'views/patient/liste.view.php';
+                            break;
             
-        case 'edit1':   $res_patient=$patient->listWhereId($cnx);
-                        include 'views/patient/edit.view.php';
-                        break;
+        case 'edit1'    :   $res_patient=$patient->listWhereId($cnx);
+                            include 'views/patient/edit.view.php';
+                            break;
             
-        case 'edit':    $patient->edit($cnx);
-                        break;
+        case 'edit'     :   $patient->edit($cnx);
+                            break;
             
-        case 'delete':  $patient->delete($cnx);
-                        break;  
+        case 'delete'   :   $patient->delete($cnx);
+                            break;  
     }
 ?>

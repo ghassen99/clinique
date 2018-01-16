@@ -5,7 +5,11 @@
                     <p class="text-muted font-13 m-b-30">
                         <form method="post" action="index.php?controller=rdv&action=ajout1">
                             <h1>
-                                Liste des rendez-vous pour aujourd'hui
+                                <strong><font color="#4068A4">
+                                    Liste des rendez-vous pour aujourd'hui
+                                </font></strong>
+                            </h1>                        
+                            <h1>
                             </h1>
                         </form>
                     </p>

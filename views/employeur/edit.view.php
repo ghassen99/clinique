@@ -2,7 +2,11 @@
         <div class="">
         <div class="page-title">
             <div class="title_left">
-            <h3>Détails d'un employeur</h3>
+            <h1>
+                <strong><font color="#4068A4">
+                    Détails d'un employeur
+                </font></strong>
+            </h1>             
             </div>
 
             <div class="title_right">

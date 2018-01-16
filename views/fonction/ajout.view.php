@@ -7,7 +7,11 @@
         <div class="">
         <div class="page-title">
             <div class="title_left">
-            <h3>Nouvelle fonction</h3>
+            <h1>
+                <strong><font color="#4068A4">
+                    Nouvelle fonction
+                </font></strong>
+            </h1> 
             </div>
 
             <div class="title_right">

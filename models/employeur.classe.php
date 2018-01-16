@@ -11,7 +11,7 @@
         private $fonction;
         private $tel_emp;
 
-        public function __construct($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonction,$tel_emp,$photo){ 
+        public function __construct($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonction,$tel_emp){ 
             $this->id_emp=$id_emp;
             $this->nom_emp=$nom_emp;
             $this->pren_emp=$pren_emp;

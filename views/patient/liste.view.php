@@ -6,21 +6,23 @@
                     <p class="text-muted font-13 m-b-30">
                         <form method="post" action="index.php?controller=patient&action=ajout1">
                             <h1>
-                                Liste des patients 
+                                <strong><font color="#4068A4">
+                                    Liste des patients
+                                </font></strong>
                                 <i style="font-size:24px;color:green" class="fa"><button type="submit">&#xf067;</button></i>
-                            </h1>
+                            </h1> 
                         </form>
                     </p>
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Nom</th>
-                                    <th>Prénom</th>
-                                    <th>CIN</th>
-                                    <th>Date de naissance</th>
-                                    <th>Adresse</th>
-                                    <th>Numéro de téléphone</th>
+                                    <th><strong>Matricule</strong></th>
+                                    <th><strong>Nom</strong></th>
+                                    <th><strong>Prénom</strong></th>
+                                    <th><strong>CIN</strong></th>
+                                    <th><strong>Date de naissance</strong></th>
+                                    <th><strong>Adresse</strong></th>
+                                    <th><strong>Numéro de téléphone</strong></th>
                                     <th></th>
                                     <th></th>     
                                     <th></th>                      
@@ -41,7 +43,7 @@
                                     <td><?php echo $obj->tel_p ?></td>
                                    
                                     <td style="width:10px;">
-                                            <a class="btn btn-primary btn-xs"  href="index.php?controller=patient&action=view&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-folder"></i>Détails</a>
+                                            <a class="btn btn-primary btn-xs"  href="index.php?controller=patient&action=details&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-folder"></i>Détails</a>
                                     </td>
                                     <td style="width:10px;">
                                             <a class="btn btn-info btn-xs" href="index.php?controller=patient&action=delete&id_p=<?php echo $obj->id_p;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
@@ -54,9 +56,6 @@
                                 }
                             ?>
                         </tbody>
-                        
-
-                        
                     </table>
                 </div>
             </div>

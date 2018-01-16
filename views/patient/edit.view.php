@@ -2,7 +2,11 @@
         <div class="">
         <div class="page-title">
             <div class="title_left">
-            <h3>Détails du patient</h3>
+            <h1>
+                <strong><font color="#4068A4">
+                    Détails du patient
+                </font></strong>
+            </h1> 
             </div>
 
             <div class="title_right">

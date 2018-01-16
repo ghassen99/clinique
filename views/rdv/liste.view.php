@@ -5,10 +5,12 @@
                 <div class="x_content">
                     <p class="text-muted font-13 m-b-30">
                         <form method="post" action="index.php?controller=rdv&action=ajout1">
-                            <h1>
+                        <h1>
+                            <strong><font color="#4068A4">
                                 Liste des rendez-vous 
                                 <i style="font-size:24px;color:green" class="fa"><button type="submit">&#xf067;</button></i>
-                            </h1>
+                            </font></strong>
+                        </h1> 
                         </form>
                     </p>
                     <table id="datatable" class="table table-striped table-bordered">
@@ -80,17 +82,12 @@
                                         </div>
                                         </div>
                                     </td>
-
                                     <td style="width:10px;">
-                                        <button type="button"> 
-                                            <a  href="index.php?controller=rdv&action=delete&id_rdv=<?php echo $obj->id_rdv;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
-                                        </button>
-                                    </td>
+                                            <a class="btn btn-info btn-xs" href="index.php?controller=rdv&action=delete&id_rdv=<?php echo $obj->id_rdv;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
+                                    </td>                                    
                                     <td  style="width:10px;">
-                                        <button type="button"> 
-                                            <a  href="index.php?controller=rdv&action=edit1&id_rdv=<?php echo $obj->id_rdv;?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
-                                        </button> 
-                                    </td>                              
+                                            <a class="btn btn-danger btn-xs" href="index.php?controller=rdv&action=edit1&id_rdv=<?php echo $obj->id_rdv;?>"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>                           
                                 </tr>
                             <?php
                                 }

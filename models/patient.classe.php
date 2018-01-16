@@ -35,7 +35,17 @@
         
         //méthode d'affichage (par id)
         public function listWhereId($cnx){	
-            $resultat=$cnx->query("select * from patient where id_p='".$this->id_p."'")->fetch(PDO::FETCH_OBJ) ;		
+            $resultat=$cnx->query("select * from patient where id_p='".$this->id_p."'")->fetchAll(PDO::FETCH_OBJ) ;		
+            return $resultat;
+        }
+
+        //details du patient (cordonnées, rdv, ...)
+        public function details_patient($cnx){
+            $resultat=$cnx->query(" select  p.*, rdv.*, m.lib_m
+                                    from    patient p, rdv, maladie m
+                                    where   p.id_p = '".$this->id_p."'
+                                    and     p.id_p = rdv.patient
+                               ")->fetchAll(PDO::FETCH_OBJ) ;
             return $resultat;
         }
         
