@@ -93,7 +93,7 @@
                         <?php 
                             if ($_SESSION['fonction'] == 'administrateur'){
                         ?>
-                        <li><a href="index.php?controller=bloc&action=liste"><i class="fa fa-university"></i> Département</a></li>
+                        <li><a href="index.php?controller=bloc&action=list"><i class="fa fa-university"></i> Département</a></li>
 
                         <li><a href="index.php?controller=salle&action=liste"><i class="fa  fa-bank"></i> Salle</a></li>
 
@@ -211,7 +211,7 @@
             <!-- footer content -->
             <footer>
             <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                Projet réalisé par <strong>Ghassen MALLOULI</strong>
             </div>
             <div class="clearfix"></div>
             </footer>

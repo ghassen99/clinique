@@ -21,7 +21,7 @@
         case 'ajout' :  $bloc->ajout($cnx);
                         break;
 
-        case 'liste':   $res=$bloc->liste($cnx);
+        case 'list':    $res=$bloc->liste($cnx);
                         include 'views/bloc/liste.view.php';
                         break;
             

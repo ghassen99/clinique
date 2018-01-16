@@ -11,14 +11,14 @@
     <title>Gentelella Alela! | </title>
 
     <!-- Bootstrap -->
-    <link href="../../asset/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../../asset/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../../asset/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../asset/vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../../asset/build/css/custom.min.css" rel="stylesheet">
+    <link href="../asset/build/css/custom.min.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -53,16 +53,16 @@
     </div>
 
     <!-- jQuery -->
-    <script src="../../asset/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../asset/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../../asset/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../asset/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="../../asset/vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../asset/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../../asset/vendors/nprogress/nprogress.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="../../asset/build/js/custom.min.js"></script>
+    <script src="../asset/build/js/custom.min.js"></script>
 </body>
 
 </html>

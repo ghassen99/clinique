@@ -14,6 +14,7 @@
         public function ajout($cnx){
         	$cnx->exec("insert into bloc (lib_bloc) 
                 values ('".$this->lib_bloc."')");
+            
             $this->redirect("index.php?controller=bloc&action=liste");
         }
         
