@@ -7,11 +7,7 @@
         <div class="">
         <div class="page-title">
             <div class="title_left">
-            <h1>
-                <strong><font color="#4068A4">
-                    Nouveau Département
-                </font></strong>
-            </h1>
+
             </div>
 
             <div class="title_right">

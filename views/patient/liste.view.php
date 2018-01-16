@@ -46,10 +46,10 @@
                                             <a class="btn btn-primary btn-xs"  href="index.php?controller=patient&action=details&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-folder"></i>Détails</a>
                                     </td>
                                     <td style="width:10px;">
-                                            <a class="btn btn-info btn-xs" href="index.php?controller=patient&action=delete&id_p=<?php echo $obj->id_p;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
+                                            <a class="btn btn-danger btn-xs" href="index.php?controller=patient&action=delete&id_p=<?php echo $obj->id_p;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>                                    
                                     <td  style="width:10px;">
-                                            <a class="btn btn-danger btn-xs" href="index.php?controller=patient&action=edit1&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-pencil"></i> Edit </a>
+                                            <a class="btn btn-info btn-xs" href="index.php?controller=patient&action=edit1&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-pencil"></i> Edit </a>
                                     </td>                              
                                 </tr>
                             <?php

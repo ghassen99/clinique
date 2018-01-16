@@ -83,10 +83,10 @@
                                         </div>
                                     </td>
                                     <td style="width:10px;">
-                                            <a class="btn btn-info btn-xs" href="index.php?controller=rdv&action=delete&id_rdv=<?php echo $obj->id_rdv;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
+                                            <a class="btn btn-danger btn-xs" href="index.php?controller=rdv&action=delete&id_rdv=<?php echo $obj->id_rdv;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>                                    
                                     <td  style="width:10px;">
-                                            <a class="btn btn-danger btn-xs" href="index.php?controller=rdv&action=edit1&id_rdv=<?php echo $obj->id_rdv;?>"><i class="fa fa-pencil"></i> Edit </a>
+                                            <a class="btn btn-info btn-xs" href="index.php?controller=rdv&action=edit1&id_rdv=<?php echo $obj->id_rdv;?>"><i class="fa fa-pencil"></i> Edit </a>
                                     </td>                           
                                 </tr>
                             <?php

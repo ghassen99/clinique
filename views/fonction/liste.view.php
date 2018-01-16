@@ -34,10 +34,10 @@
                                     <td><?php echo $obj->lib_f ?></td>
                                     <td><?php echo $obj->lib_spec ?></td>
                                     <td style="width:10px;">
-                                            <a class="btn btn-info btn-xs" href="index.php?controller=fonction&action=delete&id_f=<?php echo $obj->id_f;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
+                                            <a class="btn btn-danger btn-xs" href="index.php?controller=fonction&action=delete&id_f=<?php echo $obj->id_f;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>                                    
                                     <td  style="width:10px;">
-                                            <a class="btn btn-danger btn-xs" href="index.php?controller=fonction&action=edit1&id_f=<?php echo $obj->id_f;?>"><i class="fa fa-pencil"></i> Edit </a>
+                                            <a class="btn btn-info btn-xs" href="index.php?controller=fonction&action=edit1&id_f=<?php echo $obj->id_f;?>"><i class="fa fa-pencil"></i> Edit </a>
                                     </td>                             
                                 </tr>
                             <?php

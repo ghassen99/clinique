@@ -34,10 +34,10 @@
                                     <td><?php echo $obj->lib_m ?></td>
                                     <td><?php echo $obj->lib_bloc ?></td>
                                     <td style="width:10px;">
-                                            <a class="btn btn-info btn-xs" href="index.php?controller=maladie&action=delete&id_m=<?php echo $obj->id_m;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
+                                            <a class="btn btn-danger btn-xs" href="index.php?controller=maladie&action=delete&id_m=<?php echo $obj->id_m;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>                                    
                                     <td  style="width:10px;">
-                                            <a class="btn btn-danger btn-xs" href="index.php?controller=maladie&action=edit1&id_m=<?php echo $obj->id_m;?>"><i class="fa fa-pencil"></i> Edit </a>
+                                            <a class="btn btn-info btn-xs" href="index.php?controller=maladie&action=edit1&id_m=<?php echo $obj->id_m;?>"><i class="fa fa-pencil"></i> Edit </a>
                                     </td>                          
                                 </tr>
                             <?php
