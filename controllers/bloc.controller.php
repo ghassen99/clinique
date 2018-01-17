@@ -15,18 +15,18 @@
     $bloc=new bloc($id_bloc,$lib_bloc);
     
     switch($action){
-        case 'ajout1' : include 'views/bloc/ajout.view.php';
+        case 'ajout1' : include 'views/admin/bloc/ajout.view.php';
                         break;
 
         case 'ajout' :  $bloc->ajout($cnx);
                         break;
 
         case 'list':    $res=$bloc->liste($cnx);
-                        include 'views/bloc/liste.view.php';
+                        include 'views/admin/bloc/liste.view.php';
                         break;
             
         case 'edit1':   $res_bloc=$bloc->listWhereId($cnx);
-                        include 'views/bloc/edit.view.php';
+                        include 'views/admin/bloc/edit.view.php';
                         break;
             
         case 'edit':    $bloc->edit($cnx);

@@ -16,7 +16,7 @@
 
     switch($action){                
         case 'index' :  $res=$rdv->liste($cnx);
-                        include 'views/dashboard/index.view.php';
+                        include 'views/admin/dashboard/index.view.php';
         break;  
     }
 ?>

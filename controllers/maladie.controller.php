@@ -26,19 +26,19 @@
     
     switch($action){
         case 'ajout1' : $res_bloc=$bloc->liste($cnx);
-                        include 'views/maladie/ajout.view.php';
+                        include 'views/admin/maladie/ajout.view.php';
                         break;
 
         case 'ajout' :  $maladie->ajout($cnx);
                         break;
 
         case 'liste':   $res=$maladie->liste($cnx);
-                        include 'views/maladie/liste.view.php';
+                        include 'views/admin/maladie/liste.view.php';
                         break;
             
         case 'edit1':   $res_bloc=$bloc->liste($cnx);
                         $res_maladie=$maladie->listWhereId($cnx);
-                        include 'views/maladie/edit.view.php';
+                        include 'views/admin/maladie/edit.view.php';
                         break;
             
         case 'edit':    $maladie->edit($cnx);

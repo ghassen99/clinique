@@ -63,21 +63,21 @@
         case 'ajout1' : $res_patient=$patient->liste($cnx);
                         $res_employeur=$employeur->liste($cnx);
                         $res_maladie=$maladie->liste($cnx);
-                        include 'views/rdv/ajout.view.php';
+                        include 'views/admin/rdv/ajout.view.php';
                         break;
 
         case 'ajout' :  $rdv->ajout($cnx);
                         break;
 
         case 'liste':   $res=$rdv->liste($cnx);
-                        include 'views/rdv/liste.view.php';
+                        include 'views/admin/rdv/liste.view.php';
                         break;
             
         case 'edit1':   $res_patient=$patient->liste($cnx);
                         $res_employeur=$employeur->liste($cnx);
                         $res_maladie=$maladie->liste($cnx);
                         $res_rdv=$rdv->listWhereId($cnx);
-                        include 'views/rdv/edit.view.php';
+                        include 'views/admin/rdv/edit.view.php';
                         break;
             
         case 'edit':    $rdv->edit($cnx);

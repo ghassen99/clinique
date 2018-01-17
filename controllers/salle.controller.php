@@ -29,19 +29,19 @@
     
     switch($action){
         case 'ajout1' : $res_bloc=$bloc->liste($cnx);
-                        include 'views/salle/ajout.view.php';
+                        include 'views/admin/salle/ajout.view.php';
                         break;
 
         case 'ajout' :  $salle->ajout($cnx);
                         break;
 
         case 'liste':   $res=$salle->liste($cnx);
-                        include 'views/salle/liste.view.php';
+                        include 'views/admin/salle/liste.view.php';
                         break;
                         
         case 'edit1':   $res_bloc=$bloc->liste($cnx);
                         $res_salle=$salle->listWhereId($cnx);
-                        include 'views/salle/edit.view.php';
+                        include 'views/admin/salle/edit.view.php';
                         break;
             
         case 'edit':    $salle->edit($cnx);

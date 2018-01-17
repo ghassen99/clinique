@@ -65,19 +65,19 @@
         
         switch($action){
             case 'ajout1' : $res_fonction=$fonction->liste($cnx);
-                            include 'views/employeur/ajout.view.php';
+                            include 'views/admin/employeur/ajout.view.php';
                             break;
 
             case 'ajout' :  $employeur->ajout($cnx);
                             break;
 
             case 'liste':   $res=$employeur->liste($cnx);
-                            include 'views/employeur/liste.view.php';
+                            include 'views/admin/employeur/liste.view.php';
                             break;
                 
             case 'edit1':   $res_fonction=$fonction->liste($cnx);
                             $res_employeur=$employeur->listWhereId($cnx);
-                            include 'views/employeur/edit.view.php';
+                            include 'views/admin/employeur/edit.view.php';
                             break;
                 
             case 'edit':    $employeur->edit($cnx);

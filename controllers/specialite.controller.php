@@ -15,18 +15,18 @@
     $specialite=new specialite($id_spec,$lib_spec);
     
     switch($action){
-        case 'ajout1' : include 'views/specialite/ajout.view.php';
+        case 'ajout1' : include 'views/admin/specialite/ajout.view.php';
                         break;
 
         case 'ajout' :  $specialite->ajout($cnx);
                         break;
 
         case 'liste':   $res=$specialite->liste($cnx);
-                        include 'views/specialite/liste.view.php';
+                        include 'views/admin/specialite/liste.view.php';
                         break;
             
         case 'edit1':   $res_specialite=$specialite->listWhereId($cnx);
-                        include 'views/specialite/edit.view.php';
+                        include 'views/admin/specialite/edit.view.php';
                         break;
             
         case 'edit':    $specialite->edit($cnx);

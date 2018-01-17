@@ -26,19 +26,19 @@
     
     switch($action){
         case 'ajout1' : $res_specialite=$specialite->liste($cnx);
-                        include 'views/fonction/ajout.view.php';
+                        include 'views/admin/fonction/ajout.view.php';
                         break;
 
         case 'ajout' :  $fonction->ajout($cnx);
                         break;
 
         case 'liste':   $res=$fonction->liste($cnx);
-                        include 'views/fonction/liste.view.php';
+                        include 'views/admin/fonction/liste.view.php';
                         break;
             
         case 'edit1':   $res_specialite=$specialite->liste($cnx);
                         $res_fonction=$fonction->listWhereId($cnx);
-                        include 'views/fonction/edit.view.php';
+                        include 'views/admin/fonction/edit.view.php';
                         break;
             
         case 'edit':    $fonction->edit($cnx);
