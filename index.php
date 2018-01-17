@@ -5,7 +5,12 @@
     include "include/connexion.php" ; 
     include "models/fonctions.classe.php" ; 
     include "include/verif.php" ; 
-
+/*
+    define('PHP_FIREWALL_REQUEST_URI', strip_tags( $_SERVER['REQUEST_URI'] ) );
+    define('PHP_FIREWALL_ACTIVATION', true );
+    if ( is_file( @dirname(__FILE__).'/php-firewall/firewall.php' ) )
+    include_once( @dirname(__FILE__).'/php-firewall/firewall.php' );
+*/
     $controller="index";
     $action="index";
     if(isset($_REQUEST['controller']))
@@ -89,28 +94,28 @@
                     <h3>General</h3>
                     <ul class="nav side-menu">
                 
-                        <li><a href="index.php?controller=index&action=index"><i class="fa fa-home"></i> Dashboard</a></li>                      
+                        <li><a href="Dashboard"><i class="fa fa-home"></i> Dashboard</a></li>                      
                         <?php 
                             if ($_SESSION['fonction'] == 'administrateur'){
                         ?>
-                        <li><a href="index.php?controller=bloc&action=list"><i class="fa fa-university"></i> Département</a></li>
+                        <li><a href="Departement"><i class="fa fa-university"></i> Département</a></li>
 
-                        <li><a href="index.php?controller=salle&action=liste"><i class="fa  fa-bank"></i> Salle</a></li>
+                        <li><a href="Salle"><i class="fa  fa-bank"></i> Salle</a></li>
 
-                        <li><a href="index.php?controller=employeur&action=liste"><i class="fa fa-user"></i> Employeur</a></li>
+                        <li><a href="Employeur"><i class="fa fa-user"></i> Employeur</a></li>
                         
-                        <li><a href="index.php?controller=specialite&action=liste"><i class="fa fa-user-md"></i> Specialite</a></li>
+                        <li><a href="Specialite"><i class="fa fa-user-md"></i> Specialite</a></li>
 
-                        <li><a href="index.php?controller=fonction&action=liste"><i class="fa fa-briefcase"></i> Fonction</a></li>
+                        <li><a href="Fonction"><i class="fa fa-briefcase"></i> Fonction</a></li>
                         
-                        <li><a href="index.php?controller=maladie&action=liste"><i class="fa fa-stethoscope"></i> Maladie</a></li>
+                        <li><a href="Maladie"><i class="fa fa-stethoscope"></i> Maladie</a></li>
                                                 
                         <?php 
                           }
                         ?>
-                        <li><a href="index.php?controller=patient&action=liste"><i class="fa fa-wheelchair"></i>    Patient</a></li>
+                        <li><a href="Patient"><i class="fa fa-wheelchair"></i>    Patient</a></li>
                         
-                        <li><a href="index.php?controller=rdv&action=liste"><i class="fa fa-calendar"></i> Randez-vous</a></li>
+                        <li><a href="Randez-vous"><i class="fa fa-calendar"></i> Randez-vous</a></li>
                         
                     
                     </ul>
@@ -144,7 +149,7 @@
                     </a>
                 
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="index.php?controller=login&action=logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                        <li><a href="log_out"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                     </ul>
                     </li>
 

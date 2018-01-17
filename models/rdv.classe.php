@@ -20,7 +20,7 @@
         public function ajout($cnx){
         	$cnx->exec("insert into rdv (date_rdv,patient,maladie,employeur) 
                 values ('".$this->date_rdv."','".$this->patient."','".$this->maladie."','".$this->employeur."')");
-            $this->redirect("index.php?controller=rdv&action=liste");
+            $this->redirect("Randez-vous");
         }
         
         //méthode d'affichage
@@ -44,7 +44,7 @@
         //méthode de suppression
         public function  delete($cnx){	
             $cnx->exec("delete from rdv where id_rdv='".$this->id_rdv."'");
-            $this->redirect("index.php?controller=rdv&action=liste");
+            $this->redirect("Randez-vous");
         }
         
         //méthode de modification
@@ -52,7 +52,7 @@
             $cnx->exec("update rdv set date_rdv='".$this->date_rdv."', patient='".$this->patient."', maladie='".$this->maladie."', employeur='".$this->employeur."' 
                 where id_rdv='".$this->id_rdv."'");
                 
-            $this->redirect("index.php?controller=rdv&action=liste");
+            $this->redirect("Randez-vous");
         }
         
     }

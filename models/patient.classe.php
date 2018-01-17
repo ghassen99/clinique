@@ -24,7 +24,7 @@
         public function ajout($cnx){
         	$cnx->exec("insert into patient (nom_p,prenom_p,cin_p,naissance_p,adresse,tel_p) 
                 values ('".$this->nom_p."','".$this->prenom_p."','".$this->cin_p."','".$this->naissance_p."','".$this->adresse."','".$this->tel_p."')");
-            $this->redirect("index.php?controller=patient&action=liste");
+            $this->redirect("Patient");
         }
         
         //méthode d'affichage
@@ -35,7 +35,7 @@
         
         //méthode d'affichage (par id)
         public function listWhereId($cnx){	
-            $resultat=$cnx->query("select * from patient where id_p='".$this->id_p."'")->fetchAll(PDO::FETCH_OBJ) ;		
+            $resultat=$cnx->query("select * from patient where id_p='".$this->id_p."'")->fetch(PDO::FETCH_OBJ) ;		
             return $resultat;
         }
 
@@ -52,14 +52,14 @@
         //méthode de suppression
         public function  delete($cnx){	
             $cnx->exec("delete from patient where id_p='".$this->id_p."'");
-            $this->redirect("index.php?controller=patient&action=liste");
+            $this->redirect("Patient");
         }
         
         //méthode de modification
         public function  edit($cnx){
             $cnx->exec("update patient set nom_p='".$this->nom_p."', prenom_p='".$this->prenom_p."', cin_p='".$this->cin_p."', naissance_p='".$this->naissance_p."', adresse='".$this->adresse."', tel_p='".$this->tel_p."' 
                 where id_p='".$this->id_p."'");
-            $this->redirect("index.php?controller=patient&action=liste");
+            $this->redirect("Patient");
         }
         
     }

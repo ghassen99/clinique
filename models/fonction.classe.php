@@ -16,7 +16,7 @@
         public function ajout($cnx){
         	$cnx->exec("insert into fonction (lib_f,specialite) 
                 values ('".$this->lib_f."','".$this->specialite."')");
-            $this->redirect("index.php?controller=fonction&action=liste");
+            $this->redirect("Fonction");
         }
         
         //méthode d'affichage
@@ -36,14 +36,14 @@
         //méthode de suppression
         public function  delete($cnx){	
             $cnx->exec("delete from fonction where id_f='".$this->id_f."'");
-            $this->redirect("index.php?controller=fonction&action=liste");
+            $this->redirect("Fonction");
         }
         
         //méthode de modification
         public function  edit($cnx){
             $cnx->exec("update fonction set lib_f='".$this->lib_f."', specialite='".$this->specialite."' 
                 where id_f='".$this->id_f."'");
-            $this->redirect("index.php?controller=fonction&action=liste");
+            $this->redirect("Fonction");
         }
         
     }

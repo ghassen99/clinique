@@ -38,7 +38,7 @@
         case 'liste':   $res=$salle->liste($cnx);
                         include 'views/salle/liste.view.php';
                         break;
-            
+                        
         case 'edit1':   $res_bloc=$bloc->liste($cnx);
                         $res_salle=$salle->listWhereId($cnx);
                         include 'views/salle/edit.view.php';

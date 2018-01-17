@@ -73,7 +73,7 @@
                                             <a class="btn btn-danger btn-xs" href="index.php?controller=bloc&action=delete&id_bloc=<?php echo $obj->id_bloc;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>                                    
                                     <td  style="width:10px;">
-                                            <a class="btn btn-info btn-xs" href="index.php?controller=bloc&action=edit1&id_bloc=<?php echo $obj->id_bloc;?>"><i class="fa fa-pencil"></i> Edit </a>
+                                            <a class="btn btn-info btn-xs" href="Modifier-departement-<?php echo $obj->id_bloc;?>"><i class="fa fa-pencil"></i> Edit </a>
                                     </td>
 
                                 </tr>

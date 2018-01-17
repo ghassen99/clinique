@@ -9,7 +9,7 @@
             <div class="title_left">
             <h1>
                 <strong><font color="#4068A4">
-                    Nouveau maladie
+                    Nouvelle maladie
                 </font></strong>
             </h1> 
             </div>

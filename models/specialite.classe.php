@@ -14,7 +14,7 @@
         public function ajout($cnx){
         	$cnx->exec("insert into specialite (lib_spec) 
                 values ('".$this->lib_spec."')");
-            $this->redirect("index.php?controller=specialite&action=liste");
+            $this->redirect("Specialite");
         }
         
         //méthode d'affichage
@@ -32,14 +32,14 @@
         //méthode de suppression
         public function  delete($cnx){	
             $cnx->exec("delete from specialite where id_spec='".$this->id_spec."'");
-            $this->redirect("index.php?controller=specialite&action=liste");
+            $this->redirect("Specialite");
         }
         
         //méthode de modification
         public function  edit($cnx){
             $cnx->exec("update specialite set lib_spec='".$this->lib_spec."' 
                 where id_spec='".$this->id_spec."'");
-            $this->redirect("index.php?controller=specialite&action=liste");
+            $this->redirect("Specialite");
         }
         
     }

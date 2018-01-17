@@ -4,7 +4,7 @@
             <div class="title_left">
             <h1>
                 <strong><font color="#4068A4">
-                    Détails du salle
+                    Détails de la salle
                 </font></strong>
             </h1>             
             </div>

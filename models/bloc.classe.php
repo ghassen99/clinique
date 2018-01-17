@@ -15,7 +15,7 @@
         	$cnx->exec("insert into bloc (lib_bloc) 
                 values ('".$this->lib_bloc."')");
             
-            $this->redirect("index.php?controller=bloc&action=liste");
+            $this->redirect("Departement");
         }
         
         //méthode d'affichage
@@ -33,14 +33,14 @@
         //méthode de suppression
         public function  delete($cnx){	
             $cnx->exec("delete from bloc where id_bloc='".$this->id_bloc."'");
-            $this->redirect("index.php?controller=bloc&action=liste");
+            $this->redirect("Departement");
         }
         
         //méthode de modification
         public function  edit($cnx){
             $cnx->exec("update bloc set lib_bloc='".$this->lib_bloc."' 
                 where id_bloc='".$this->id_bloc."'");
-            $this->redirect("index.php?controller=bloc&action=liste");
+            $this->redirect("Departement");
         }
         
     }

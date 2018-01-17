@@ -18,7 +18,7 @@
         public function ajout($cnx){
         	$cnx->exec("insert into salle (nb_lit,etage,id_bloc) 
                 values ('".$this->nb_lit."','".$this->etage."','".$this->id_bloc."')");
-            $this->redirect("index.php?controller=salle&action=liste");
+            $this->redirect("Salle");
         }
         
         //méthode d'affichage
@@ -39,14 +39,14 @@
         //méthode de suppression
         public function  delete($cnx){	
             $cnx->exec("delete from salle where id_salle='".$this->id_salle."'");
-            $this->redirect("index.php?controller=salle&action=liste");
+            $this->redirect("Salle");
         }
         
         //méthode de modification
         public function  edit($cnx){
             $cnx->exec("update salle set nb_lit='".$this->nb_lit."', etage='".$this->etage."', id_bloc='".$this->id_bloc."' 
                 where id_salle='".$this->id_salle."'");
-            $this->redirect("index.php?controller=salle&action=liste");
+            $this->redirect("Salle");
         }
         
     }

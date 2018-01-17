@@ -4,7 +4,7 @@
             <div class="x_panel">
                 <div class="x_content">
                     <p class="text-muted font-13 m-b-30">
-                        <form method="post" action="index.php?controller=patient&action=ajout1">
+                        <form method="post" action="Nouveau_patient">
                             <h1>
                                 <strong><font color="#4068A4">
                                     Liste des patients
@@ -43,13 +43,13 @@
                                     <td><?php echo $obj->tel_p ?></td>
                                    
                                     <td style="width:10px;">
-                                            <a class="btn btn-primary btn-xs"  href="index.php?controller=patient&action=details&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-folder"></i>Détails</a>
+                                            <a class="btn btn-primary btn-xs"  href="view-patient-<?php echo $obj->id_p;?>"><i class="fa fa-folder"></i>Détails</a>
                                     </td>
                                     <td style="width:10px;">
                                             <a class="btn btn-danger btn-xs" href="index.php?controller=patient&action=delete&id_p=<?php echo $obj->id_p;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>                                    
                                     <td  style="width:10px;">
-                                            <a class="btn btn-info btn-xs" href="index.php?controller=patient&action=edit1&id_p=<?php echo $obj->id_p;?>"><i class="fa fa-pencil"></i> Edit </a>
+                                            <a class="btn btn-info btn-xs" href="Modifier-patient-<?php echo $obj->id_p;?>"><i class="fa fa-pencil"></i> Edit </a>
                                     </td>                              
                                 </tr>
                             <?php

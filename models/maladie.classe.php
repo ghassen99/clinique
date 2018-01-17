@@ -16,7 +16,7 @@
         public function ajout($cnx){
         	$cnx->exec("insert into maladie (lib_m,bloc) 
                 values ('".$this->lib_m."','".$this->bloc."')");
-            $this->redirect("index.php?controller=maladie&action=liste");
+            $this->redirect("Maladie");
         }
         
         //méthode d'affichage
@@ -36,14 +36,14 @@
         //méthode de suppression
         public function  delete($cnx){	
             $cnx->exec("delete from maladie where id_m='".$this->id_m."'");
-            $this->redirect("index.php?controller=maladie&action=liste");
+            $this->redirect("Maladie");
         }
         
         //méthode de modification
         public function  edit($cnx){
             $cnx->exec("update maladie set lib_m='".$this->lib_m."', bloc='".$this->bloc."' 
                 where id_m='".$this->id_m."'");
-            $this->redirect("index.php?controller=maladie&action=liste");
+            $this->redirect("Maladie");
         }
         
     }

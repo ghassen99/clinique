@@ -53,7 +53,7 @@
                                     Département <span class="required">*</span>
                                     </label>
                                     <span class="col-md-6">
-                                        <select class="form-control col-md-7 col-xs-12" name="id_bloc" id="id_bloc">
+                                        <select class="form-control col-md-7 col-xs-12" name="id_bloc" id="id_bloc" >
                                         <?php
                                         foreach($res_bloc as $obj){
                                             echo "<option value=".$obj->id_bloc.">".$obj->lib_bloc."</options>";   

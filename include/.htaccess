@@ -1,0 +1,7 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+AuthName "Authentification!"
+AuthType Basic
+AuthUserFile "C:/xampp/htdocs/clinique/.htpasswd"
+Require valid-user

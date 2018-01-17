@@ -1,0 +1,54 @@
+RewriteEngine on
+Options +FollowSymlinks
+
+#liste          #####################################################################################################################
+#####################################################################################################################################
+RewriteRule	^Departement$	                http://localhost/clinique/index.php?controller=bloc&action=list [L]
+RewriteRule	^Salle$	                        http://localhost/clinique/index.php?controller=salle&action=liste [L]
+RewriteRule	^Specialite$	                http://localhost/clinique/index.php?controller=specialite&action=liste [L]
+RewriteRule	^Fonction$	                    http://localhost/clinique/index.php?controller=fonction&action=liste [L]
+RewriteRule	^Maladie$	                    http://localhost/clinique/index.php?controller=maladie&action=liste [L]
+RewriteRule	^Employeur$	                    http://localhost/clinique/index.php?controller=employeur&action=liste [L]
+RewriteRule	^Dashboard$	                    http://localhost/clinique/index.php?controller=index&action=index [L]
+RewriteRule	^Patient$	                    http://localhost/clinique/index.php?controller=patient&action=liste [L]
+RewriteRule	^Randez-vous$	                http://localhost/clinique/index.php?controller=rdv&action=liste [L]
+#####################################################################################################################################
+
+#ajout          #####################################################################################################################
+#####################################################################################################################################
+RewriteRule	^nouvel_employeur$	            http://localhost/clinique/index.php?controller=employeur&action=ajout1 [L]
+RewriteRule	^Nouvelle_salle$	            http://localhost/clinique/index.php?controller=salle&action=ajout1 [L]
+RewriteRule	^Nouvelle_fonction$	            http://localhost/clinique/index.php?controller=fonction&action=ajout1 [L]
+RewriteRule	^Nouveau_maladie$	            http://localhost/clinique/index.php?controller=maladie&action=ajout1 [L]
+RewriteRule	^Nouveau_patient$	            http://localhost/clinique/index.php?controller=patient&action=ajout1 [L]
+RewriteRule	^Nouveau_rendez-vous$	        http://localhost/clinique/index.php?controller=rdv&action=ajout1 [L]
+#####################################################################################################################################
+
+#modification   #####################################################################################################################
+##################################################################################################################################### 
+RewriteRule ^Modifier-departement-([1-9]+)$ http://localhost/clinique/index.php?controller=bloc&action=edit1&id_bloc=$1 [L]
+RewriteRule ^Modifier-salle-([1-9]+)$       http://localhost/clinique/index.php?controller=salle&action=edit1&id_salle=$1 [L]
+RewriteRule ^Modifier-specialite-([1-9]+)$  http://localhost/clinique/index.php?controller=specialite&action=edit1&id_spec=$1 [L]
+RewriteRule ^Modifier-fonction-([1-9]+)$    http://localhost/clinique/index.php?controller=fonction&action=edit1&id_f=$1 [L]
+RewriteRule ^Modifier-maladie-([1-9]+)$     http://localhost/clinique/index.php?controller=maladie&action=edit1&id_m=$1 [L]
+RewriteRule ^Modifier-employeur-([1-9]+)$   http://localhost/clinique/index.php?controller=employeur&action=edit1&id_emp=$1 [L]
+RewriteRule ^Modifier-patient-([1-9]+)$     http://localhost/clinique/index.php?controller=patient&action=edit1&id_p=$1 [L]
+RewriteRule ^Modifier-rdv-([1-9]+)$         http://localhost/clinique/index.php?controller=rdv&action=edit1&id_rdv=$1 [L]
+#####################################################################################################################################
+
+#Infos patient   ####################################################################################################################
+RewriteRule ^view-patient-([1-9]+)$     http://localhost/clinique/index.php?controller=patient&action=details&id_p=$1 [L]
+##################################################################################################################################### 
+
+##################################################################################################################################### 
+#Auth           #####################################################################################################################                      
+#####################################################################################################################################
+RewriteRule	^Authentification$	            login.php	[L]
+RewriteRule	^log_out$                       http://localhost/clinique/index.php?controller=login&action=logout [L]
+#####################################################################################################################################
+
+AuthName "Authentification!"
+AuthType Basic
+AuthUserFile "C:/xampp/htdocs/clinique/.htpasswd"
+Require valid-user
+

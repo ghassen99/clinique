@@ -21,47 +21,41 @@
             <div id="myTabContent" class="tab-content">
             <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                 <p>
-                    <?php
-                        foreach ($res_patient as $obj) {
-                    ?>
                     <br>
                     <div class="row">
                         <div class="col-sm-3"><strong><font color="blue">Matricule</font></strong></div>
-                        <div class="col-sm-6"><?php echo $obj->id_p ?></div>
+                        <div class="col-sm-6"><?php echo $res_patient->id_p ?></div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-3"><strong><font color="blue">Nom</font></strong></div>
-                        <div class="col-sm-6"><?php echo $obj->nom_p ?></div>
+                        <div class="col-sm-6"><?php echo $res_patient->nom_p ?></div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-3"><strong><font color="blue">Prénom</font></strong></div>
-                        <div class="col-sm-6"><?php echo $obj->prenom_p ?></div>
+                        <div class="col-sm-6"><?php echo $res_patient->prenom_p ?></div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-3"><strong><font color="blue">CIN</font></strong></div>
-                        <div class="col-sm-6"><?php echo $obj->cin_p ?></div>
+                        <div class="col-sm-6"><?php echo $res_patient->cin_p ?></div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-3"><strong><font color="blue">Date de naissance</font></strong></div>
-                        <div class="col-sm-6"><?php echo $obj->naissance_p ?></div>
+                        <div class="col-sm-6"><?php echo $res_patient->naissance_p ?></div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-3"><strong><font color="blue">Adresse</font></strong></div>
-                        <div class="col-sm-6"><?php echo $obj->adresse ?></div>
+                        <div class="col-sm-6"><?php echo $res_patient->adresse ?></div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-3"><strong><font color="blue">Numéro de téléphone</font></strong></div>
-                        <div class="col-sm-6"><?php echo $obj->tel_p ?></div>
-                    </div>
-                    <?php
-                        }
-                    ?>                    
+                        <div class="col-sm-6"><?php echo $res_patient->tel_p ?></div>
+                    </div>                 
                 </p>
             </div>
 

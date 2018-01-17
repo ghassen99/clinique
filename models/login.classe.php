@@ -43,15 +43,15 @@
                 $_SESSION['fonction'] = $vs['lib_f'];
               }
               
-              $this->redirect("index.php");
+              $this->redirect("Dashboard");
             }else
-              $this->redirect("login.php");
+              $this->redirect("Authentification");
         }
 
         //methode logout
         public function logout($cnx){
               session_destroy();
-              $this->redirect("login.php");
+              $this->redirect("Authentification");
         }
           
     }

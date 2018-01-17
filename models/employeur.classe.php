@@ -26,7 +26,7 @@
         public function ajout($cnx){
         	$cnx->exec("insert into employeur (nom_emp,pren_emp,cin_emp,password,naiss_emp,fonction,tel_emp) 
                 values ('".$this->nom_emp."','".$this->pren_emp."','".$this->cin_emp."','".$this->password."','".$this->naiss_emp."','".$this->fonction."','".$this->tel_emp."')");
-            $this->redirect("index.php?controller=employeur&action=liste");
+            $this->redirect("Employeur");
         }
         
         //méthode d'affichage
@@ -46,14 +46,14 @@
         //méthode de suppression
         public function  delete($cnx){	
             $cnx->exec("delete from employeur where id_emp='".$this->id_emp."'");
-            $this->redirect("index.php?controller=employeur&action=liste");
+            $this->redirect("Employeur");
         }
         
         //méthode de modification
         public function  edit($cnx){
             $cnx->exec("update employeur set nom_emp='".$this->nom_emp."', pren_emp='".$this->pren_emp."', cin_emp='".$this->cin_emp."', password='".$this->password."', naiss_emp='".$this->naiss_emp."', fonction='".$this->fonction."' , tel_emp='".$this->tel_emp."'
                 where id_emp='".$this->id_emp."'");
-            $this->redirect("index.php?controller=employeur&action=liste");
+            $this->redirect("Employeur");
         }
         
     }
