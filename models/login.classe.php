@@ -45,13 +45,13 @@
               
               $this->redirect("Dashboard");
             }else
-              $this->redirect("Authentification");
+              $this->redirect("admin");
         }
 
         //methode logout
         public function logout($cnx){
               session_destroy();
-              $this->redirect("Authentification");
+              $this->redirect("admin");
         }
           
     }

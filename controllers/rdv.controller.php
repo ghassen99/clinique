@@ -27,6 +27,7 @@
     $naiss_emp='';
     $fonction='';
     $tel_emp='';
+    $photo='';
     //initialisation des attributs de l’objet maladie
     $id_m='';
     $lib_m='';
@@ -54,7 +55,7 @@
     $patient=new patient($id_p,$nom_p,$prenom_p,$cin_p,$naissance_p,$adresse,$tel_p);
     
     //instanciation de l’objet employeur (clé étrangére)
-    $employeur=new employeur($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonction,$tel_emp);
+    $employeur=new employeur($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonction,$tel_emp,$photo);
     
     //instanciation de l’objet maladie (clé étrangére)
     $maladie=new maladie($id_m,$lib_m,$bloc);

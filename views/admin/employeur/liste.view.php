@@ -17,12 +17,14 @@
                         <thead>
                                 <tr>
                                     <th style="width:10%">Matricule</th>
+                                    <th style="width:5%">Photo</th> 
                                     <th style="width:10%">Nom</th>
                                     <th style="width:10%">Prénom</th>
                                     <th style="width:10%">CIN</th>
                                     <th style="width:15%">Date de naissance</th>
                                     <th style="width:15%">Numéro de téléphone</th>
                                     <th style="width:10%">Fonction</th>
+                                    <th style="width:10%">Spécialité</th>
                                     <th style="width:5%"></th>
                                     <th style="width:5%"></th>                             
                                 </tr>
@@ -34,12 +36,19 @@
                             ?>
                                 <tr>
                                     <td><?php echo $obj->id_emp ?></td>
+                                    <td>
+                                        <div class="profile_pic">
+                                            <img src="<?php echo "files/".$obj->photo ?>" width="100px" class="img-circle">
+                                        </div>
+                                        <br>
+                                    </td>
                                     <td><?php echo $obj->nom_emp ?></td>
                                     <td><?php echo $obj->pren_emp ?></td>
                                     <td><?php echo $obj->cin_emp ?></td>
                                     <td><?php echo $obj->naiss_emp ?></td>
                                     <td><?php echo $obj->tel_emp ?></td>
-                                    <td><?php echo $obj->lib_f ?></td>
+                                    <td><?php echo $obj->lib_f ?></td> 
+                                    <td><?php echo $obj->lib_spec ?></td>
                                     <td style="width:10px;">
                                             <a class="btn btn-danger btn-xs" href="index.php?controller=employeur&action=delete&id_emp=<?php echo $obj->id_emp;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>                                    

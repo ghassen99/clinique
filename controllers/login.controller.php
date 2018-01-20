@@ -29,7 +29,7 @@
         case 'login': $inst->login($cnx);
         break;   
 
-        case 'logout': $inst->logout();
+        case 'logout': $inst->logout($cnx);
         break;   
     }
 ?>

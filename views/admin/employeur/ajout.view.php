@@ -25,7 +25,7 @@
 
                 <div class="x_content">
 
-                <form  method="post" action="index.php?controller=employeur&action=ajout" class="form-horizontal form-label-left" novalidate >
+                <form  method="post" action="index.php?controller=employeur&action=ajout" class="form-horizontal form-label-left" novalidate  enctype="multipart/form-data">
                     
                     <!-- nom_emp -->
                     <div class="item form-group">
@@ -57,7 +57,26 @@
                         </div>
                     </div>
 
+                    <!-- photo_emp -->
+                    <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                        Photo <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
 
+                        <div class="input-group input-file" name="photo">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-choose" name="photo" type="button">Choose</button>
+                            </span>
+                            <input type="text" name="photo" class="form-control" placeholder='Choose a file...' />
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning btn-reset" type="button">Reset</button>
+                            </span>
+                        </div>
+
+                        </div>
+                    </div>                   
+  
                     <!-- naiss_emp -->
                     <div class="item form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
@@ -85,11 +104,11 @@
                         <label class="control-label col-md-3" for="name">
                         fonction <span class="required">*</span>
                         </label>
-                        <span class="col-md-6">
+                        <span class="col-md-6">                     
                             <select class="form-control col-md-7 col-xs-12" name="fonction" id="fonction">
                             <?php
                             foreach($res_fonction as $obj){
-                                echo "<option value=".$obj->id_f.">".$obj->lib_f."</options>";   
+                                echo "<option value=".$obj->id_f.">".$obj->lib_f." (".$obj->lib_spec.")</options>";   
                             }
                             ?>
                             </select>   

@@ -12,6 +12,7 @@
     $naiss_emp='';
     $fonc='';
     $tel_emp='';
+    $photo='';
     //initialisation des attributs de l’objet fonction
     $id_f='';
     $lib_f='';
@@ -20,10 +21,35 @@
     //récuperation des valeurs des attributs de l’objet 
     if(isset($_REQUEST['id_emp'])) 
         $id_emp=$_REQUEST['id_emp'];
+
     if(isset($_REQUEST['nom_emp'])) 
-        $nom_emp=$_REQUEST['nom_emp'];
+        $nom_emp=$_REQUEST['nom_emp'];       
+
     if(isset($_REQUEST['pren_emp'])) 
         $pren_emp=$_REQUEST['pren_emp'];
+
+    if(isset($_REQUEST['photo']))
+        $photo=$_REQUEST['photo'];
+
+        if ($photo == null)
+        $photo='user.png';
+        
+    //recuperation de l'image de voiture
+    if(isset($_FILES['photo']) && $_FILES['photo']['error']==0){
+        if(isset($_REQUEST['photo']))
+            unlink("files/".$_REQUEST['photo']);
+
+    $photo=$_FILES['photo']['name'];
+
+    $tab=explode('.',$photo);
+    $photo=$tab[0]."_".$nom_emp.".".$tab[1];
+    $tmp=$_FILES['photo']['tmp_name'];
+
+    copy($tmp,"files/".$photo);
+    }
+
+
+       
     if(isset($_REQUEST['cin_emp'])) 
         $cin_emp=$_REQUEST['cin_emp'];
     if(isset($_REQUEST['password'])) 
@@ -58,8 +84,7 @@
         $tel_emp=$_REQUEST['tel_emp'];
 
         //instanciation de l’objet employeur
-        $employeur=new employeur($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonc,$tel_emp);
-
+        $employeur=new employeur($id_emp,$nom_emp,$pren_emp,$cin_emp,$password,$naiss_emp,$fonc,$tel_emp,$photo);
         //instanciation de l’objet fonction (clé étrangére)
         $fonction=new fonction($id_f,$lib_f,$specialite);
         
