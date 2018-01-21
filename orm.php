@@ -14,6 +14,52 @@ mkdir("models", 0777, true);
 if(!file_exists("views"))
 mkdir("views", 0777, true);
 
+
+echo "######################################################<br>
+######################################################<br>
+######################################################
+<br><br>######################################################<br>
+############# GENERATION du dossier include ############<br>
+######################################################
+<br>";
+ 
+// fichier connexion ***************************************************************** */
+$fic=fopen("include/connexion.php", "w+");
+$contenu="<?php
+    try{
+        \$cnx= new PDO('mysql:host=localhost;dbname=".$db_name."', 'root', '');
+        \$cnx->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+    }
+    catch(PDOException \$e){
+        echo \"Connection a MySql impossible :\", \$e->getMessage();
+        exit(); //ou die();
+    }
+?>";
+fwrite($fic,$contenu,100000000);
+fclose($fic); 
+
+echo "<font color='green'> Le fichier connexion est créé avec succes.</font><br>";
+chdir($oldPath);//revenir en arrière
+// *********************************************************************************** */
+
+// fichier vérif ********************************************************************* */
+$fic=fopen("include/verif.php", "w+");
+$contenu="<?php
+    /*
+    if(!isset(\$_SESSION['login']) || !isset(\$_SESSION['pass'])){
+        echo \"<script>window.location.href='login.php';</script>\";
+        exit();
+    }
+    */
+?>";
+fwrite($fic,$contenu,100000000);
+fclose($fic); 
+
+echo "<font color='green'>le fichier verif est créé avec succes.</font><br>";
+chdir($oldPath);//revenir en arrière
+// *********************************************************************************** */
+
+
 echo "######################################################<br>
 ########### GENERATION DES CONTROLEURS ##########<br>
 ######################################################
@@ -494,50 +540,6 @@ chdir($oldPath);//revenir en arrière
 // *********************************************************************************** */
 
 chdir($oldPath);//revenir en arrière
-
-echo "######################################################<br>
-######################################################<br>
-######################################################
-<br><br>######################################################<br>
-############# GENERATION du dossier include ############<br>
-######################################################
-<br>";
- 
-// fichier connexion ***************************************************************** */
-$fic=fopen("include/connexion.php", "w+");
-$contenu="<?php
-    try{
-        \$cnx= new PDO('mysql:host=localhost;dbname=".$db_name."', 'root', '');
-        \$cnx->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
-    }
-    catch(PDOException \$e){
-        echo \"Connection a MySql impossible :\", \$e->getMessage();
-        exit(); //ou die();
-    }
-?>";
-fwrite($fic,$contenu,100000000);
-fclose($fic); 
-
-echo "<font color='green'> Le fichier connexion est créé avec succes.</font><br>";
-chdir($oldPath);//revenir en arrière
-// *********************************************************************************** */
-
-// fichier vérif ********************************************************************* */
-$fic=fopen("include/verif.php", "w+");
-$contenu="<?php
-    /*
-    if(!isset(\$_SESSION['login']) || !isset(\$_SESSION['pass'])){
-        echo \"<script>window.location.href='login.php';</script>\";
-        exit();
-    }
-    */
-?>";
-fwrite($fic,$contenu,100000000);
-fclose($fic); 
-
-echo "<font color='green'>le fichier verif est créé avec succes.</font><br>";
-chdir($oldPath);//revenir en arrière
-// *********************************************************************************** */
 
 echo "######################################################<br>
 ######################################################<br>
