@@ -154,10 +154,11 @@ while($res=$req->fetch()){
 
     //les models des clé étrangéres
     for ($ii=1;$ii<sizeof($requete2);$ii++){ //pour chaque table trouvé
+	if ($requete2[$ii]->REFERENCED_TABLE_NAME !="" )
     $contenu.="include \"models/".$requete2[$ii]->REFERENCED_TABLE_NAME.".classe.php\";          
     ";
     }
-
+	
     $contenu.="
     //initialisation des attributs de l’objet ".$res[0]."
     ";
@@ -166,17 +167,21 @@ while($res=$req->fetch()){
     ";
     }
 
+
     //les clé étrangére s'il y a 
     for ($ii=1;$ii<sizeof($requete2);$ii++){ //pour chaque table trouvé
-    $r=$cnx->query("SELECT * FROM information_schema.columns WHERE table_name = '".$requete2[$ii]->REFERENCED_TABLE_NAME."' AND table_schema='".$db_name."'");
-    $s=$r->fetchAll();
-    $contenu.="//initialisation des attributs de l’objet ".$requete2[$ii]->REFERENCED_TABLE_NAME."
-    ";
-    foreach($s as $vs){
-    $contenu.="$".$vs['COLUMN_NAME']."='';
-    ";
-    }
-    }
+	$r=$cnx->query("SELECT * FROM information_schema.columns WHERE table_name = '".$requete2[$ii]->REFERENCED_TABLE_NAME."' AND table_schema='".$db_name."'");
+	$s=$r->fetchAll();
+	if ($requete2[$ii]->REFERENCED_TABLE_NAME != ""){
+	$contenu.="//initialisation des attributs de l’objet ".$requete2[$ii]->REFERENCED_TABLE_NAME."
+	";
+	
+	foreach($s as $vs){
+	$contenu.="$".$vs['COLUMN_NAME']."='';
+	";
+	}
+	}
+	}
  
     $contenu.="
     //récuperation des valeurs des attributs de l’objet 
@@ -221,24 +226,25 @@ while($res=$req->fetch()){
     ";
     
     //les clé étrangére s'il y a (écécution de la requete)
-    for ($ii=1;$ii<sizeof($requete2);$ii++){ //pour chaque table trouvé
+	for ($ii=1;$ii<sizeof($requete2);$ii++){ //pour chaque table trouvé
 
-    $r=$cnx->query("SELECT * FROM information_schema.columns WHERE table_name = '".$requete2[$ii]->REFERENCED_TABLE_NAME."' AND table_schema='".$db_name."'");
-    $s=$r->fetchAll();
-
-    $contenu.="
-    //instanciation de l’objet ".$requete2[$ii]->REFERENCED_TABLE_NAME." (clé étrangére)
-    \$".$requete2[$ii]->REFERENCED_TABLE_NAME."=new ".$requete2[$ii]->REFERENCED_TABLE_NAME."(";
-    $i=0;
-    foreach($s as $v){
-    $contenu.="$".$v['COLUMN_NAME'];
-    $i++;
-    if($i<count($s))
-    $contenu.=",";
-    }
-    $contenu.=");
-    ";
-    }
+	$r=$cnx->query("SELECT * FROM information_schema.columns WHERE table_name = '".$requete2[$ii]->REFERENCED_TABLE_NAME."' AND table_schema='".$db_name."'");
+	$s=$r->fetchAll();
+	if ($requete2[$ii]->REFERENCED_TABLE_NAME !="" ){
+	$contenu.="
+	//instanciation de l’objet ".$requete2[$ii]->REFERENCED_TABLE_NAME." (clé étrangére)
+	\$".$requete2[$ii]->REFERENCED_TABLE_NAME."=new ".$requete2[$ii]->REFERENCED_TABLE_NAME."(";
+	$i=0;
+	foreach($s as $v){
+	$contenu.="$".$v['COLUMN_NAME'];
+	$i++;
+	if($i<count($s))
+	$contenu.=",";
+	}
+	$contenu.=");
+	";
+	}
+	}
     
     $contenu.="
     switch(\$action){
@@ -253,11 +259,12 @@ while($res=$req->fetch()){
     
     //les clé étrangére s'il y a 
     for ($ii=1;$ii<sizeof($requete2);$ii++){ //pour chaque table trouvé
+    if ($requete2[$ii]->REFERENCED_TABLE_NAME != ""){
     $contenu.=
                 "\$res_".$requete2[$ii]->REFERENCED_TABLE_NAME."=$".$requete2[$ii]->REFERENCED_TABLE_NAME."->liste(\$cnx);
                         ";
     }
- 
+    }
     $contenu.="include 'views/".$res[0]."/ajout.view.php';
                         break;
 
@@ -271,10 +278,12 @@ while($res=$req->fetch()){
         case 'edit1':   ";   
     //les clé étrangére s'il y a 
     for ($ii=1;$ii<sizeof($requete2);$ii++){ //pour chaque table trouvé
+    if ($requete2[$ii]->REFERENCED_TABLE_NAME != ""){
         $contenu.=
                 "\$res_".$requete2[$ii]->REFERENCED_TABLE_NAME."=$".$requete2[$ii]->REFERENCED_TABLE_NAME."->liste(\$cnx);
                         ";
         }
+    }
 
     $contenu.="\$res_".$res[0]."=\$".$res[0]."->listWhereId(\$cnx);
                         include 'views/".$res[0]."/edit.view.php';
@@ -550,7 +559,7 @@ echo "######################################################<br>
 <br>";
  
 // index ***************************************************************************** */
-/*
+
 $fic=fopen("index.php", "w+");
 $contenu='<?php
     if (!isset($_SESSION))
@@ -831,7 +840,7 @@ fclose($fic);
 
 echo "<font color='green'> index créé avec succes.</font><br>";
 chdir($oldPath);//revenir en arrière
-*/
+
 // *********************************************************************************** */
 
 // interface login ******************************************************************* */
@@ -1093,14 +1102,12 @@ $oldPath = getcwd();
                             ';
                             }
                             $contenu.='        <td style="width:10px;">
-                                        <button type="button"> 
-                                            <a  href="index.php?controller='.$res[0].'&action=delete&'.$res1[0]['COLUMN_NAME'].'=<?php echo $obj->'.$res1[0]['COLUMN_NAME'].';?>"onclick="if(confirm(\'Etes vous sure de supprimer?\')) return true ;else return false"><i style="font-size:24px;color:red" class="fa">&#xf1f8;</i></a>
-                                        </button>
+                                            <a class="btn btn-danger btn-xs" href="index.php?controller='.$res[0].'&action=delete&'.$res1[0]['COLUMN_NAME'].'=<?php echo $obj->'.$res1[0]['COLUMN_NAME'].';?>"onclick="if(confirm(\'Etes vous sure de supprimer?\')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>
                                     <td  style="width:10px;">
                                         <button type="button"> 
-                                            <a  href="index.php?controller='.$res[0].'&action=edit1&'.$res1[0]['COLUMN_NAME'].'=<?php echo $obj->'.$res1[0]['COLUMN_NAME'].';?>"><i class="fa fa-pencil-square-o" style="font-size:24px;color:blue"></i></a>
-                                        </button>';
+                                            <a class="btn btn-info btn-xs" href="index.php?controller='.$res[0].'&action=edit1&'.$res1[0]['COLUMN_NAME'].'=<?php echo $obj->'.$res1[0]['COLUMN_NAME'].';?>"><i class="fa fa-pencil"></i> Edit </a>
+                                        ';
                             $contenu.=' 
                                     </td>                              
                                 </tr>

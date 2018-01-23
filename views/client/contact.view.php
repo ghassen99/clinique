@@ -27,41 +27,37 @@
 
                         <div id="sendmessage">Your message has been sent. Thank you!</div>
                         <div id="errormessage"></div>
-                        <form id="contact-form" action="" method="post" role="form" class="contactForm">
+                        <form  method="post" action="envoie_mail" class="form-label-left" novalidate >
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="name">
-                                Name</label>
+                                        <label for="name"> Name</label>
                                         <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                         <div class="validation"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">
-                                Email Address</label>
+                                        <label for="email">Email Address</label>
                                         <div class="form-group">
                                             <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                                             <div class="validation"></div>
                                         </div>
                                     </div>
+                                    
                                     <div class="form-group">
-                                        <label for="subject">
-                                Subject</label>
+                                        <label for="subject">Subject</label>
                                         <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                         <div class="validation"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="name">
-                                Message</label>
+                                        <label for="name">Message</label>
                                         <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                                         <div class="validation"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
-                            Send Message</button>
+                                    <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -70,28 +66,25 @@
 
                 <div class="col-lg-4">
                     <div class="widget-contact">
-                        <h5>Main Office</h5>
+                        <address>
+                            <strong>Adresse : </strong><br>
+                            <?php echo $res_information[0]->adresse ?>
+				        </address>
 
                         <address>
-				  <strong>Squas Design, Inc.</strong><br>
-				  Tower 795 Folsom Ave, Beautiful Suite 600<br>
-				  San Francisco, CA 94107<br>
-				  <abbr title="Phone">P:</abbr> (123) 456-7890
-				</address>
+				        <strong>Email : </strong><br>
+				            <a href="mailto:#"><?php echo $res_information[0]->mail ?></a>
+				        </address>
 
                         <address>
-				  <strong>Email</strong><br>
-				  <a href="mailto:#">email.name@example.com</a>
-				</address>
+				        <strong>TEL : </strong><br>
+				            <?php echo $res_information[0]->tel ?>
+				        </address>
+
                         <address>
-				  <strong>We're on social networks</strong><br>
-                       	<ul class="company-social">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-dribble"><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-				</address>
+				        <strong>FAX : </strong><br>
+				            <?php echo $res_information[0]->fax ?>
+				        </address>
 
                     </div>
                 </div>

@@ -50,100 +50,12 @@
     Author URL: https://bootstrapmade.com
   ======================================================= -->
 
-<!-- caroussel -->
-    <script src="asset/js_gallerie/jquery-2.1.3.min.js"></script>
-    <script src="asset/js_gallerie/cycle2.js"></script>
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
-	<style type="text/css">
-	*{
-		margin:0;
-		padding:0;
-	}
-	#container {
-		width:100%;
-		position:relative;s
-		}
-	#slideshow {
-		height:100%;
-		width:100%;
-		}
-	#slideshow img {
-		height:100%;
-		width:100%;
-		position: absolute;
-		z-index:10;
-		min-width:100%;
-		min-height:100%;
-		}
-	#pager {
-		height:120px; 
-		width:100%;
-		background:rgba(0,0,0,0.5);
-		position:absolute;
-		bottom:5%;
-		z-index:1000;
-		text-align:center;
-		opacity:0;
-		transition:all .2s ease-in-out 0s;
-		}
-	#pager:hover {
-		opacity:1;
-		}
-	#pager img {
-		margin: 10px 5px;
-		opacity:0.3;
-		transition:all .3s ease-in-out 0s;
-		}
-	#pager img:hover {
-		opacity:1;
-		transform:scale(1.05);
-		z-index:100;
-		}
-	#prev_c {
-		height:100%;
-		width:200px;
-		position:absolute;
-		left:0;
-		top:0;
-		z-index:100;
-		}
-		#prev_c img {
-			height:120px;
-			width:120px;
-			position:absolute;
-			top:0;
-			bottom:0;
-			left:0;
-			margin:auto 0px;
-			}
-		
-	#next_c {
-		height:100%;
-		width:200px;
-		position:absolute;
-		right:0;
-		top:0;
-		z-index:100;
-		}
-		#next_c img {
-			height:120px;
-			width:120px;
-			position:absolute;
-			top:0;
-			bottom:0;
-			right:0;
-			margin:auto 0px;
-			}
-		#next #prev { visibility:hidden;}
-		#next,#prev:hover {
-			cursor:pointer;
-			}
-		#next_c,#prev_c:hover #next,#prev { visibility:visible;}
-		
-	</style>
-
-<!-- caroussel -->  
-
+    <!-- __________________________________________ carousel _________________________________________________________ --> 
+    <link rel="apple-touch-icon" href="https://www.bootply.com/bootstrap/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="https://www.bootply.com/bootstrap/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="https://www.bootply.com/bootstrap/img/apple-touch-icon-114x114.png">
+        <link rel="stylesheet" href="asset_client/carousel/style.css">
+    <!-- __________________________________________ carousel _________________________________________________________ -->    
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -168,8 +80,8 @@
                 <ul class="nav navbar-nav">
 
                     <li class="active"><a href="#intro">Accueil</a></li>
-                    <li><a href="#Présentation">Présentation</a></li>
-                    <li><a href="#equipe">Nos équipe</a></li>
+                    <li><a href="#Presentation">Présentation</a></li>
+                    <li><a href="#departement">Nos Département</a></li>
                     <li><a href="#specialite">Nos spécialités</a></li>
                     <li><a href="#contact">Contact</a></li>
 
@@ -180,27 +92,6 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Section: Accueil -->
-
-    <!-- /Section: Accueil -->
-
-    <!-- Section: Présentation -->
-
-    <!-- /Section: Présentation -->
-
-
-    <!-- Section: equipe -->
-
-    <!-- /Section: equipe -->
-
-
-    <!-- Section: specialite -->
-
-    <!-- /Section: specialite -->
-
-    <!-- Section: contact -->
-
-    <!-- /Section: contact -->
     <?php
         include "controllers/".$controller.".controller.php";
     ?>
@@ -215,7 +106,7 @@
                             </a>
                         </div>
                     </div>
-                    <p>&copy;Projet réalisé par <strong>Ghassen MALLOULI</strong></p>
+                    <p>&copy;2017 : Projet réalisé par <strong>Ghassen MALLOULI</strong></p>
                     <div class="credits">
                         <!--
                             All the links in the footer should remain intact. 

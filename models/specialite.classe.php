@@ -22,7 +22,17 @@
             $resultat=$cnx->query("select * from specialite")->fetchAll(PDO::FETCH_OBJ) ;		
             return $resultat;
         }
-        
+
+        //méthode d'affichage (seulement pour les médecins)
+        public function liste_spec_med($cnx){	
+            $resultat=$cnx->query("select   s.* 
+                                   from     specialite s, fonction f
+                                   where    s.id_spec = f.specialite
+                                   and      f.lib_f like 'Médecin'
+                                  ")->fetchAll(PDO::FETCH_OBJ) ;		
+            return $resultat;
+        }
+
         //méthode d'affichage (par id)
         public function listWhereId($cnx){	
             $resultat=$cnx->query("select * from specialite where id_spec='".$this->id_spec."'")->fetch(PDO::FETCH_OBJ) ;		

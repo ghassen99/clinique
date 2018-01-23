@@ -4,23 +4,25 @@
     
         private $id_bloc;
         private $lib_bloc;
+        private $photo;
 
-        public function __construct($id_bloc,$lib_bloc){ 
+        public function __construct($id_bloc,$lib_bloc,$photo){ 
             $this->id_bloc=$id_bloc;
             $this->lib_bloc=$lib_bloc;
+            $this->photo=$photo;
         }
 
         //méthode d'ajout
         public function ajout($cnx){
-        	$cnx->exec("insert into bloc (lib_bloc) 
-                values ('".$this->lib_bloc."')");
+        	$cnx->exec("insert into bloc (lib_bloc,photo) 
+                values ('".$this->lib_bloc."','".$this->photo."' )");
             
             $this->redirect("Departement");
         }
         
         //méthode d'affichage
         public function liste($cnx){	
-            $resultat=$cnx->query("select * from bloc")->fetchAll(PDO::FETCH_OBJ) ;		
+            $resultat=$cnx->query("select * from bloc ")->fetchAll(PDO::FETCH_OBJ) ;		
             return $resultat;
         }
         
@@ -38,7 +40,7 @@
         
         //méthode de modification
         public function  edit($cnx){
-            $cnx->exec("update bloc set lib_bloc='".$this->lib_bloc."' 
+            $cnx->exec("update bloc set lib_bloc='".$this->lib_bloc."' , photo='".$this->photo."'
                 where id_bloc='".$this->id_bloc."'");
             $this->redirect("Departement");
         }

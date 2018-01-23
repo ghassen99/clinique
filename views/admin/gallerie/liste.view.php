@@ -28,44 +28,42 @@
                 </div>
             </div>
         </div>
+
+
+        <div id="carousel-b" class="carousel slide carousel-sync" data-ride="carousel1" data-pause="false">
+            <div class="carousel-inner">
+                <?php 
+                $ind = 0;
+                
+                
+                foreach ($res as $obj)  {
+
+                    
+                    if ($ind == 0){
+                        echo  '<div class="item active">' ;
+                    }
+                    else{
+                        echo  '<div class="item">' ;
+                    }
+                    $ind = $ind + 1;
+                    ?>      
+                    <img src="<?php echo "files/".$obj->lien ?>" onclick="if(confirm('Etes vous sure de supprimer?')) return fn(<?php echo $obj->id ?>) ;else return false" style="width:100%; height:500px;">
+                    </div>
+
+                    <?php
+                        }
+                    ?>     
+
+            </div>
+
+            <a class="left carousel-control" href="https://www.bootply.com/run?ext=1#carousel-b" data-slide="prev">
+            </a>
+            <a class="right carousel-control" href="https://www.bootply.com/run?ext=1#carousel-b" data-slide="next">
+            </a>
+        </div>
         
-
-        <div id="slideshow" class="cycle-slideshow" 
-        data-cycle-fx="fade" 
-        data-cycle-manual-fx="scrollHorz" 
-        data-cycle-pager-fx = "fade" 
-        data-cycle-manual-speed="400"
-        data-cycle-prev="#prev"  	
-        data-cycle-next="#next"
-        data-cycle-speed="600"  
-        data-cycle-timeout="3000" 
-        data-cycle-pager = "#pager" > 
-            <?php
-            foreach ($res as $obj) {
-            ?>
-                <img src="<?php echo "files/".$obj->lien ?>" id="intro_img" onclick="if(confirm('Etes vous sure de supprimer?')) return fn(<?php echo $obj->id ?>) ;else return false" />
-            <?php
-            }
-            ?>
-
         </div>
-
-                
-                <div id="prev_c"><img id="prev" src="img/prev1.svg"/></div>
-                <div id="next_c"><img id="next" src="img/next1.svg"/></div>
-        </div>
-
         <div id="txtHintv"></div>
-        <script type="text/javascript">
-            function height() {
-                var h = window.innerHeight;
-                var a = document.getElementById('container');
-                a.style.height = h+"px";
-                }
-                
-            window.addEventListener('load',height);
-            window.addEventListener('resize',height);
-        </script>
     </div>
 <div>
 

@@ -32,7 +32,7 @@
             $resultat=$cnx->query("select * from maladie where id_m='".$this->id_m."'")->fetch(PDO::FETCH_OBJ) ;		
             return $resultat;
         }
-        
+
         //méthode de suppression
         public function  delete($cnx){	
             $cnx->exec("delete from maladie where id_m='".$this->id_m."'");

@@ -10,6 +10,7 @@
     //initialisation des attributs de l’objet bloc
     $id_bloc='';
     $lib_bloc='';
+    $photo='';
     
     //récuperation des valeurs des attributs de l’objet 
     if(isset($_REQUEST['id_salle'])) 
@@ -25,7 +26,7 @@
     $salle=new salle($id_salle,$nb_lit,$etage,$id_bloc);
     
     //instanciation de l’objet bloc (clé étrangére)
-    $bloc=new bloc($id_bloc,$lib_bloc);
+    $bloc=new bloc($id_bloc,$lib_bloc,$photo);
     
     switch($action){
         case 'ajout1' : $res_bloc=$bloc->liste($cnx);

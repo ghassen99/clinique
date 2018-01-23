@@ -1,11 +1,11 @@
-<section id="Présentation" class="home-section text-center">
+<section id="Presentation" class="home-section text-center">
         <div class="heading-about">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="wow bounceInDown" data-wow-delay="0.4s">
                             <div class="section-heading">
-                                <h2>About us</h2>
+                                <h2>Présentation</h2>
                                 <i class="fa fa-2x fa-angle-down"></i>
 
                             </div>
@@ -22,53 +22,85 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
-                    <div class="wow bounceInUp" data-wow-delay="0.2s">
-                        <div class="team boxed-grey">
-                            <div class="inner">
-                                <h5>Anna Hanaceck</h5>
-                                <p class="subtitle">Pixel Crafter</p>
-                                <div class="avatar"><img src="img/team/1.jpg" alt="" class="img-responsive img-circle" /></div>
-                            </div>
+            <div class="col-md-12">
+                <h3><b><font color="#4068A4">
+                    Notre équipe se compose de : 
+                </font></b></h3>
+            </div>
+            <div class="col-md-4">
+                <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <img src="img/icons/service-icon-1.png" alt="" />
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="wow bounceInUp" data-wow-delay="0.5s">
-                        <div class="team boxed-grey">
-                            <div class="inner">
-                                <h5>Maura Daniels</h5>
-                                <p class="subtitle">Ruby on Rails</p>
-                                <div class="avatar"><img src="img/team/2.jpg" alt="" class="img-responsive img-circle" /></div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="wow bounceInUp" data-wow-delay="0.8s">
-                        <div class="team boxed-grey">
-                            <div class="inner">
-                                <h5>Jack Briane</h5>
-                                <p class="subtitle">jQuery Ninja</p>
-                                <div class="avatar"><img src="img/team/3.jpg" alt="" class="img-responsive img-circle" /></div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="wow bounceInUp" data-wow-delay="1s">
-                        <div class="team boxed-grey">
-                            <div class="inner">
-                                <h5>Tom Petterson</h5>
-                                <p class="subtitle">Typographer</p>
-                                <div class="avatar"><img src="img/team/4.jpg" alt="" class="img-responsive img-circle" /></div>
-
-                            </div>
+                        <div class="service-desc">
+                            <h4><b><font color="#4068A4">
+                                Employeurs 
+                            </font></b></h4>
+                            <p>
+                                <?php 
+                                    $i=0;
+                                    foreach ($res_employeur as $obj){
+                                        $i++;
+                                    }
+                                    echo $i." employeurs";
+                                ?>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+    
+            <div class="col-md-4">
+                <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <img src="img/icons/service-icon-1.png" alt="" />
+                        </div>
+                        <div class="service-desc">
+                            <h4><b><font color="#4068A4">
+                                Spécialités 
+                            </font></b></h4>
+                            <p>
+                                <?php 
+                                    $i=0;
+                                    foreach ($res_specialite as $obj){
+                                        $i++;
+                                    }
+                                    echo $i." spécialités";
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <img src="img/icons/service-icon-1.png" alt="" />
+                        </div>
+                        <div class="service-desc">
+                            <h4><b><font color="#4068A4">
+                                Départements 
+                            </font></b></h4>
+
+                            <p>
+                                <?php 
+                                    $i=0;
+                                    foreach ($res_bloc as $obj){
+                                        $i++;
+                                    }
+                                    echo $i." départements";
+                                ?>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
         </div>
     </section>

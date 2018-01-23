@@ -29,7 +29,7 @@
                                             </font></strong>
                                         </h1>
                                     </div>
-                                    <form  method="post" action="index.php?controller=bloc&action=ajout" class="form-horizontal form-label-left" novalidate >
+                                    <form  method="post" action="index.php?controller=bloc&action=ajout" class="form-horizontal form-label-left" novalidate enctype="multipart/form-data">
                                         <div class="modal-body">
                                             <p>                    
                                                 <!-- lib_bloc -->
@@ -41,6 +41,27 @@
                                                         <input id="lib_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_bloc" placeholder="Libellé" required="required" type="text">
                                                     </div>
                                                 </div>
+
+                                                                                    
+                                                <!-- photo_emp -->
+                                                <div class="item form-group">
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                                                    Photo <span class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                                    <div class="input-group input-file" name="photo">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-default btn-choose" name="photo" type="button">Choose</button>
+                                                        </span>
+                                                        <input type="text" name="photo" class="form-control" placeholder='Choose a file...' />
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-warning btn-reset" type="button">Reset</button>
+                                                        </span>
+                                                    </div>
+
+                                                    </div>
+                                                </div>  
                                                                                     
                                             </p>
                                         </div>
@@ -57,6 +78,7 @@
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                                 <tr>
+                                    <th>Photo</th>
                                     <th>Libéllé</th>
                                     <th></th>
                                     <th></th>                             
@@ -68,6 +90,12 @@
                             foreach ($res as $obj) {
                             ?>
                                 <tr>
+                                    <td>
+                                        <div class="profile_pic">
+                                            <img src="<?php echo "files/".$obj->photo ?>" width="100px" class="img-circle">
+                                        </div>
+                                        <br>
+                                    </td>
                                     <td><?php echo $obj->lib_bloc ?></td>
                                     <td style="width:10px;">
                                             <a class="btn btn-danger btn-xs" href="index.php?controller=bloc&action=delete&id_bloc=<?php echo $obj->id_bloc;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
