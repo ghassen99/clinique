@@ -9,7 +9,7 @@
                                     Liste des Départements 
                                 </font></strong>
                                
-                                <i style="font-size:24px;color:green" data-toggle="modal" data-target=".bs-example-modal-lg" class="fa"><button type="submit">&#xf067;</button></i>                              
+                                <i style="font-size:24px;color:green" data-toggle="modal" data-target=".bs-example-modal-lg" class="fa"><button class="btn btn-success" type="submit">&#xf067;</button></i>                              
 
                             </h1>
                             
@@ -38,7 +38,7 @@
                                                     Libellé <span class="required">*</span>
                                                     </label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input id="lib_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_bloc" placeholder="Libellé" required="required" type="text">
+                                                        <input onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32' id="lib_bloc" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_bloc" placeholder="Libellé" required="required" type="text">
                                                     </div>
                                                 </div>
 

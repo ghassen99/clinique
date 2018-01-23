@@ -34,7 +34,7 @@
                         Nombre des lits <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_salle->nb_lit; ?>" id="nb_lit" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nb_lit" placeholder="Nombre des lits" required="required" type="text">
+                            <input minlength="2" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="<?php echo $res_salle->nb_lit; ?>" id="nb_lit" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nb_lit" placeholder="Nombre des lits" required="required" type="text">
                         </div>
                     </div>
                 
@@ -44,7 +44,7 @@
                         Etage <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_salle->etage; ?>" id="etage" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="etage" placeholder="Etage" required="required" type="text">
+                            <input minlength="2" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="<?php echo $res_salle->etage; ?>" id="etage" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="etage" placeholder="Etage" required="required" type="text">
                         </div>
                     </div>
                 

@@ -24,7 +24,7 @@
                     <!-- id_m -->
                     <div class="item form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input value="<?php echo $res_maladie->id_m; ?>" id="id_m" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="id_m" placeholder="id_m" required="required" style="display:none" type="text">
+                            <input onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32' value="<?php echo $res_maladie->id_m; ?>" id="id_m" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="id_m" placeholder="id_m" required="required" style="display:none" type="text">
                         </div>
                     </div>
                 

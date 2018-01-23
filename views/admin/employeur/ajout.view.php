@@ -33,7 +33,7 @@
                         Nom <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="nom_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nom_emp" placeholder="Nom" required="required" type="text">
+                            <input onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32' id="nom_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nom_emp" placeholder="Nom" required="required" type="text">
                         </div>
                     </div>
                 
@@ -43,7 +43,7 @@
                         Prénom <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="pren_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="pren_emp" placeholder="Prénom" required="required" type="text">
+                            <input onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32' id="pren_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="pren_emp" placeholder="Prénom" required="required" type="text">
                         </div>
                     </div>
                 
@@ -53,7 +53,7 @@
                         CIN <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="cin_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="cin_emp" placeholder="CIN" required="required" type="text">
+                            <input minlength="8" maxlength="8" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="cin_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="cin_emp" placeholder="CIN" required="required" type="text">
                         </div>
                     </div>
 
@@ -122,7 +122,7 @@
                         Numéro de téléphone <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="tel_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="tel_emp" placeholder="Numéro de téléphone" required="required" type="text">
+                            <input minlength="8" maxlength="8" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="tel_emp" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="tel_emp" placeholder="Numéro de téléphone" required="required" type="text">
                         </div>
                     </div>
                 

@@ -27,35 +27,35 @@
 
                 <form  method="post" action="index.php?controller=patient&action=ajout" class="form-horizontal form-label-left" novalidate >
                     
-                                    <!-- nom_p -->
-                                    <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                        Nom <span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="nom_p" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nom_p" placeholder="Nom" required="required" type="text">
-                                        </div>
-                                    </div>
-                                
-                                    <!-- prenom_p -->
-                                    <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                        Prénom <span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="prenom_p" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="prenom_p" placeholder="Prénom" required="required" type="text">
-                                        </div>
-                                    </div>
-                                
-                                    <!-- cin_p -->
-                                    <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                        CIN <span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="cin_p" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="cin_p" placeholder="CIN" required="required" type="text">
-                                        </div>
-                                    </div>
+                            <!-- nom_p -->
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                                Nom <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32' id="nom_p" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="nom_p" placeholder="Nom" required="required" type="text">
+                                </div>
+                            </div>
+                        
+                            <!-- prenom_p -->
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                                Prénom <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32' id="prenom_p" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="prenom_p" placeholder="Prénom" required="required" type="text">
+                                </div>
+                            </div>
+                        
+                            <!-- cin_p -->
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                                CIN <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input minlength="8" maxlength="8" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="cin_p" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="cin_p" placeholder="CIN" required="required" type="text">
+                                </div>
+                            </div>
                                                          
                             <!-- naissance_p -->
                             <div class="item form-group">
@@ -95,7 +95,7 @@
                                 Numéro de téléphone <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="tel_p" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="tel_p" placeholder="Numéro de téléphone" required="required" type="text">
+                                    <input minlength="8" maxlength="8" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="tel_p" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="tel_p" placeholder="Numéro de téléphone" required="required" type="text">
                                 </div>
                             </div>
                                 

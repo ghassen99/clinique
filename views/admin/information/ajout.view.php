@@ -49,7 +49,7 @@
                                         Numéro de téléphone <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="tel" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="tel" placeholder="tel" required="required" type="text">
+                                            <input minlength="8" maxlength="8" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="tel" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="tel" placeholder="tel" required="required" type="text">
                                         </div>
                                     </div>
                                 
@@ -59,7 +59,7 @@
                                         Fax <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="fax" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="fax" placeholder="fax" required="required" type="text">
+                                            <input minlength="8" maxlength="8" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="fax" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="fax" placeholder="fax" required="required" type="text">
                                         </div>
                                     </div>
 

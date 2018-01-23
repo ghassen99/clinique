@@ -7,7 +7,17 @@
                         <form method="post" action="nouvelle_information">
                             <h1>
                                 Liste des informations 
-                                <i style="font-size:24px;color:green" class="fa"><button type="submit">&#xf067;</button></i>
+                                <?php 
+                                    if (sizeof($res) == 0){
+                                ?>
+                                <i style="font-size:24px;color:green" class="fa"><button class="btn btn-success" type="submit">&#xf067;</button></i>
+                                <?php 
+                                    }else{
+                                ?>
+                                <i style="font-size:24px;color:green" class="fa"><button class="btn btn-success" type="submit" disabled>&#xf067;</button></i>
+                                <?php 
+                                   }
+                                ?>                                
                             </h1>
                         </form>
                     </p>
@@ -25,13 +35,15 @@
                         </thead>
                         
                         <tbody>
-
+                                <?php 
+                                    foreach($res as $obj){
+                                ?>
                                 <tr>
-                                    <td><?php echo $res[0]->id ?></td>
-                                    <td><?php echo $res[0]->adresse ?></td>
-                                    <td><?php echo $res[0]->mail ?></td>
-                                    <td><?php echo $res[0]->tel ?></td>
-                                    <td><?php echo $res[0]->fax ?></td>
+                                    <td><?php echo $obj->id ?></td>
+                                    <td><?php echo $obj->adresse ?></td>
+                                    <td><?php echo $obj->mail ?></td>
+                                    <td><?php echo $obj->tel ?></td>
+                                    <td><?php echo $obj->fax ?></td>
                                     <td style="width:10px;">
                                             <a class="btn btn-danger btn-xs" href="index.php?controller=information&action=delete&id=<?php echo $res[0]->id;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>
@@ -39,6 +51,9 @@
                                             <a class="btn btn-info btn-xs" href="Modifier-information-<?php echo $res[0]->id;?>"><i class="fa fa-pencil"></i> Edit </a>
                                     </td>                              
                                 </tr>
+                                <?php 
+                                    }
+                                ?>
                             
                         </tbody>
                         

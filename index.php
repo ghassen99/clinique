@@ -85,6 +85,11 @@
             <link rel="stylesheet" href="asset_client/carousel/style.css">
         <!-- __________________________________________ carousel _________________________________________________________ -->    
 
+        <!-- ______________________________________ Filtre ____________________________________________-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- ______________________________________ Filtre ____________________________________________-->
+
     </head>
     
     <body class="nav-md">
@@ -349,6 +354,18 @@
     });
     });
     </script>
+        <!-- ______________________________________ Filtre ____________________________________________-->
+            <script>
+            $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myDIV *").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+            });
+            </script>
+        <!-- ______________________________________ Filtre ____________________________________________-->
 
     <!-- choisir un fichier -->
     <script>

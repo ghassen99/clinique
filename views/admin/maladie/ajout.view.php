@@ -33,7 +33,7 @@
                                         Libellé <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="lib_m" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_m" placeholder="Libellé" required="required" type="text">
+                                            <input onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32' id="lib_m" class="form-control col-md-7 col-xs-12" data-validate-length-range="30" name="lib_m" placeholder="Libellé" required="required" type="text">
                                         </div>
                                     </div>
                                 

@@ -8,7 +8,7 @@
                         <h1>
                             <strong><font color="#4068A4">
                                 Liste des rendez-vous 
-                                <i style="font-size:24px;color:green" class="fa"><button type="submit">&#xf067;</button></i>
+                                <i style="font-size:24px;color:green" class="fa"><button class="btn btn-success" type="submit">&#xf067;</button></i>
                             </font></strong>
                         </h1> 
                         </form>
