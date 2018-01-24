@@ -50,7 +50,17 @@
                                     <td><?php echo $obj->lib_f ?></td> 
                                     <td><?php echo $obj->lib_spec ?></td>
                                     <td style="width:10px;">
+                                        <?php 
+                                            if ( $obj->id_emp == $_SESSION['id_emp']){
+                                        ?>
+                                            <span class="btn btn-danger btn-xs" disabled><i class="fa fa-trash-o"></i> Delete </span>
+                                        <?php
+                                            }else{
+                                        ?>
                                             <a class="btn btn-danger btn-xs" href="index.php?controller=employeur&action=delete&id_emp=<?php echo $obj->id_emp;?>"onclick="if(confirm('Etes vous sure de supprimer?')) return true ;else return false"><i class="fa fa-trash-o"></i> Delete </a>
+                                        <?php
+                                            }
+                                        ?>
                                     </td>                                    
                                     <td  style="width:10px;">
                                             <a class="btn btn-info btn-xs" href="Modifier-employeur-<?php echo $obj->id_emp;?>"><i class="fa fa-pencil"></i> Edit </a>

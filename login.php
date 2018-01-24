@@ -3,7 +3,7 @@
         session_start();
     include "include/connexion.php" ; 
     include "models/fonctions.classe.php" ; 
-    include "include/verif.php" ;
+    
 
     $controller="login";
     $action="log";
@@ -24,7 +24,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Authentification</title>
 
     <!-- Bootstrap -->
     <link href="asset/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">

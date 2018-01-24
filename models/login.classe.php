@@ -28,6 +28,7 @@
                               where   cin_emp = '".$this->cin_emp."'  
                               and     password = '".$this->password."'
                               and     e.fonction = f.id_f
+                              and     (lower(f.lib_f) = 'administrateur' or lower(f.lib_f)='secretaire')
                             ");
                              
             $verif=$req->rowCount();
@@ -42,6 +43,7 @@
                 $_SESSION['id_emp'] = $vs['id_emp'];
                 $_SESSION['nom_emp'] = $vs['nom_emp'];
                 $_SESSION['pren_emp'] = $vs['pren_emp'];
+                $_SESSION['photo'] = $vs['photo'];
                 $_SESSION['fonction'] = $vs['lib_f'];
               }
               

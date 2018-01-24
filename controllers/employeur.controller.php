@@ -41,8 +41,7 @@
         
     //recuperation de l'image de l'employeur
     if(isset($_FILES['photo']) && $_FILES['photo']['error']==0){
-        if(isset($_REQUEST['photo']))
-            unlink("files/".$_REQUEST['photo']);
+        
 
     $photo=$_FILES['photo']['name'];
 

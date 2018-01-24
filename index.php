@@ -26,7 +26,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
-        <title> </title>
+        <title>Clinique</title>
     
  
 
@@ -90,67 +90,64 @@
 
 
                 <div class="clearfix"></div>
-
+                <?php
+                    if (!isset($_SESSION))
+                        session_start();
+                ?>
                 <!-- menu profile quick info -->
-                <div class="profile clearfix">
-
-                <div class="profile_info">
-                    <h2>
-                        <span style="font-size: 25px;color:#FFFFFF"><b>Bienvenue</b></span>
-                        <span style="font-size: 15px;"><b>
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="<?php echo "files/".$_SESSION['photo'] ?>" class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span style="font-size: 25px;color:#FFFFFF"><b>Bienvenue</b></span>
+                            <h2>
                             <?php
-                                if (!isset($_SESSION))
-                                    session_start();
                                 echo $_SESSION['nom_emp'].' '.$_SESSION['pren_emp'];
                             ?>
-                            </b>
-                        </span>
-                    </h2>
-                </div>
-                <div class="clearfix"></div>
-                </div>
+                            </h2>
+                        </div>
+                    </div>
                 <!-- /menu profile quick info -->
 
                 <br />
 
                 <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                <div class="menu_section">
-                    <h3>General</h3>
-                    <ul class="nav side-menu">
-                
-                        <li><a href="Dashboard"><i class="fa fa-home"></i> Dashboard</a></li>                      
-                        <?php 
-                            if ($_SESSION['fonction'] == 'administrateur'){
-                        ?>
-                        <li><a href="Gallerie"><i class="fa fa-stethoscope"></i> Gallerie</a></li>
-
-                        <li><a href="Informations"><i class="fa fa-info-circle"></i> Informations</a></li>
-
-                        <li><a href="Departement"><i class="fa fa-university"></i> Département</a></li>
-
-                        <li><a href="Salle"><i class="fa  fa-bank"></i> Salle</a></li>
-
-                        <li><a href="Employeur"><i class="fa fa-user"></i> Employeur</a></li>
-                        
-                        <li><a href="Specialite"><i class="fa fa-user-md"></i> Specialite</a></li>
-
-                        <li><a href="Fonction"><i class="fa fa-briefcase"></i> Fonction</a></li>
-                        
-                        <li><a href="Maladie"><i class="fa fa-stethoscope"></i> Maladie</a></li>
-                                                
-                        <?php 
-                          }
-                        ?>
-                        <li><a href="Patient"><i class="fa fa-wheelchair"></i>    Patient</a></li>
-                        
-                        <li><a href="Randez-vous"><i class="fa fa-calendar"></i> Randez-vous</a></li>
-                        
+                    <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
                     
-                    </ul>
-                </div>
+                            <li><a href="Dashboard"><i class="fa fa-home"></i> Dashboard</a></li>                      
+                            <?php 
+                                if ($_SESSION['fonction'] == 'administrateur'){
+                            ?>
+                            <li><a href="Gallerie"><i class="fa fa-stethoscope"></i> Gallerie</a></li>
 
+                            <li><a href="Informations"><i class="fa fa-info-circle"></i> Informations</a></li>
 
+                            <li><a href="Departement"><i class="fa fa-university"></i> Département</a></li>
+
+                            <li><a href="Salle"><i class="fa  fa-bank"></i> Salle</a></li>
+
+                            <li><a href="Employeur"><i class="fa fa-user"></i> Employeur</a></li>
+                            
+                            <li><a href="Specialite"><i class="fa fa-user-md"></i> Specialite</a></li>
+
+                            <li><a href="Fonction"><i class="fa fa-briefcase"></i> Fonction</a></li>
+                            
+                            <li><a href="Maladie"><i class="fa fa-stethoscope"></i> Maladie</a></li>
+                                                    
+                            <?php 
+                            }
+                            ?>
+                            <li><a href="Patient"><i class="fa fa-wheelchair"></i>    Patient</a></li>
+                            
+                            <li><a href="Randez-vous"><i class="fa fa-calendar"></i> Randez-vous</a></li>
+                            
+                        
+                        </ul>
+                    </div>
                 </div>
                 <!-- /sidebar menu -->
 
