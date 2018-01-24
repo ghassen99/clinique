@@ -3,6 +3,7 @@
         session_start();
     include "include/connexion.php" ; 
     include "models/fonctions.classe.php" ; 
+    include "include/verif.php" ;
 
     $controller="login";
     $action="log";

@@ -1,5 +1,6 @@
-Options +FollowSymlinks
-RewriteEngine On
+Options +FollowSymlinks #Activer la gestion des URL symbolique
+RewriteEngine On # Activer le module de réecriture
+
 
 AuthName "Authentification!"
 AuthType Basic

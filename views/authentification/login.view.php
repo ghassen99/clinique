@@ -24,8 +24,7 @@
         <input id="pass" type="password" class="form-control" data-validate-length-range="30" name="pass" placeholder="password" required="required">
         </div>
         <div>
-            <button id="send" type="submit" class="btn btn-success">Submit</button>
-            <a class="reset_pass" href="#">Lost your password?</a>
+            <button id="send"  type="submit" class="btn btn-success col-md-12 col-xs-12">Submit</button>
         </div>
 
         <div class="clearfix"></div>

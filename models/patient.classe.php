@@ -43,8 +43,9 @@
         public function details_patient($cnx){
             $resultat=$cnx->query(" select  p.*, rdv.*, m.lib_m
                                     from    patient p, rdv, maladie m
-                                    where   p.id_p = '".$this->id_p."'
-                                    and     p.id_p = rdv.patient
+                                    where   rdv.patient = '".$this->id_p."'
+                                    and     rdv.patient = p.id_p
+                                    and     rdv.maladie = m.id_m
                                ")->fetchAll(PDO::FETCH_OBJ) ;
             return $resultat;
         }

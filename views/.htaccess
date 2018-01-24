@@ -1,10 +1,5 @@
-Options +FollowSymlinks
-RewriteEngine On
-
-#RewriteRule ^index_([a-z1-9]+)_([a-z1-9]+)\.html$ index.php?controller=$1&action=$2 [L]
-#RewriteRule ^(.*)_([a-z1-9]+)_([a-z1-9]+)_([1-9]+)\.php$ index.php?controller=$2&action=$3&id_bloc=$4 [L]
-#RewriteRule ^(.*)\.html$ index.php [L]
-
+Options +FollowSymlinks #Activer la gestion des URL symbolique
+RewriteEngine On # Activer le module de réecriture
 
 
 AuthName "Authentification!"

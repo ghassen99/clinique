@@ -13,6 +13,8 @@
     $fonc='';
     $tel_emp='';
     $photo='';
+
+    $decision=''; //la decision de changement de la mot de passe
     //initialisation des attributs de l’objet fonction
     $id_f='';
     $lib_f='';
@@ -27,6 +29,9 @@
 
     if(isset($_REQUEST['pren_emp'])) 
         $pren_emp=$_REQUEST['pren_emp'];
+
+    if(isset($_REQUEST['decision'])) 
+        $decision=$_REQUEST['decision'];
 
     if(isset($_REQUEST['photo']))
         $photo=$_REQUEST['photo'];
@@ -105,7 +110,11 @@
                             include 'views/admin/employeur/edit.view.php';
                             break;
                 
-            case 'edit':    $employeur->edit($cnx);
+            case 'edit':    if ($decision == 'on')  
+                                $employeur->edit($cnx);
+                            else 
+                                $employeur->edit_sans_changer_password($cnx);
+
                             break;
                 
             case 'delete':  $employeur->delete($cnx);

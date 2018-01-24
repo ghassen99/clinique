@@ -4,13 +4,7 @@
 
     include "include/connexion.php" ; 
     include "models/fonctions.classe.php" ; 
-    //include "include/verif.php" ; 
-/*
-    define('PHP_FIREWALL_REQUEST_URI', strip_tags( $_SERVER['REQUEST_URI'] ) );
-    define('PHP_FIREWALL_ACTIVATION', true );
-    if ( is_file( @dirname(__FILE__).'/php-firewall/firewall.php' ) )
-    include_once( @dirname(__FILE__).'/php-firewall/firewall.php' );
-*/
+
     $controller="client";
     $action="index_client";
     if(isset($_REQUEST['controller']))

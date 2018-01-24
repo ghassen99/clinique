@@ -1,6 +1,9 @@
 RewriteEngine on
 Options +FollowSymlinks
 
+RewriteCond %{HTTP_REFERER} !^http://localhost|http://127.0.0.1
+RewriteRule ^.*\.png|jpg|gif|css|js$ - [F]
+
 #liste          
 RewriteRule	^Informations$	                http://localhost/clinique/index.php?controller=information&action=liste [L]
 RewriteRule	^Gallerie$	                    http://localhost/clinique/index.php?controller=gallerie&action=liste [L]
@@ -45,6 +48,8 @@ RewriteRule	^admin$	                        login.php	[L]
 #Auth                               
 RewriteRule	^Authentification$	            login.php	[L]
 RewriteRule	^log_out$                       http://localhost/clinique/index.php?controller=login&action=logout [L]
+
+
 
 AuthName "Authentification!"
 AuthType Basic

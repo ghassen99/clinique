@@ -5,12 +5,7 @@
     include "include/connexion.php" ; 
     include "models/fonctions.classe.php" ; 
     include "include/verif.php" ; 
-/*
-    define('PHP_FIREWALL_REQUEST_URI', strip_tags( $_SERVER['REQUEST_URI'] ) );
-    define('PHP_FIREWALL_ACTIVATION', true );
-    if ( is_file( @dirname(__FILE__).'/php-firewall/firewall.php' ) )
-    include_once( @dirname(__FILE__).'/php-firewall/firewall.php' );
-*/
+
     $controller="index";
     $action="index";
     if(isset($_REQUEST['controller']))
@@ -78,17 +73,12 @@
             
             }
         </script>
-        <!-- __________________________________________ carousel _________________________________________________________ --> 
-            <link rel="apple-touch-icon" href="https://www.bootply.com/bootstrap/img/apple-touch-icon.png">
-            <link rel="apple-touch-icon" sizes="72x72" href="https://www.bootply.com/bootstrap/img/apple-touch-icon-72x72.png">
-            <link rel="apple-touch-icon" sizes="114x114" href="https://www.bootply.com/bootstrap/img/apple-touch-icon-114x114.png">
-            <link rel="stylesheet" href="asset_client/carousel/style.css">
-        <!-- __________________________________________ carousel _________________________________________________________ -->    
-
-        <!-- ______________________________________ Filtre ____________________________________________-->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- ______________________________________ Filtre ____________________________________________-->
+    <!-- __________________________________________ carousel _________________________________________________________ --> 
+        <link rel="apple-touch-icon" href="https://www.bootply.com/bootstrap/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="https://www.bootply.com/bootstrap/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="https://www.bootply.com/bootstrap/img/apple-touch-icon-114x114.png">
+        <link rel="stylesheet" href="asset_client/carousel/style.css">
+    <!-- __________________________________________ carousel _________________________________________________________ -->    
 
     </head>
     
@@ -192,35 +182,6 @@
                     </ul>
                     </li>
 
-                    <li role="presentation" class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-envelope-o"></i>
-                        <span class="badge bg-green">6</span>
-                    </a>
-                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                        <li>
-                            <a>
-                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                <span>
-                                <span>John Smith</span>
-                                <span class="time">3 mins ago</span>
-                                </span>
-                                <span class="message">
-                                Film festivals used to be do-or-die moments for movie makers. They were where...
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                        <div class="text-center">
-                            <a>
-                            <strong>See All Alerts</strong>
-                            <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                        </li>
-                    </ul>
-                    </li>
                 </ul>
                 </nav>
             </div>

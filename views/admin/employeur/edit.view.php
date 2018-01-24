@@ -157,6 +157,12 @@
                         </div>
                     </div>  
 
+                    <div class="item form-group">
+                        <label class="col-md-6 col-sm-6 col-xs-12" for="name">              
+                                <b><u>Autoriser la modification de la mot de passe ?</u></b>
+                                <input name="decision" type="checkbox">
+                        </label>
+                    </div>
 
                 <div class="ln_solid"></div>
                 <div class="form-group">

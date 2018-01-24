@@ -22,12 +22,14 @@
 
         //methode login
         public function login($cnx){
+            $this->password=md5(sha1($this->password));
             $req=$cnx->query("select  e.*, f.lib_f 
                               from    employeur e, fonction f
                               where   cin_emp = '".$this->cin_emp."'  
-                              and     password like'".$this->password."'
+                              and     password = '".$this->password."'
                               and     e.fonction = f.id_f
                             ");
+                             
             $verif=$req->rowCount();
             $res=$req->fetchAll();
             

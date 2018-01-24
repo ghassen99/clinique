@@ -26,6 +26,7 @@
 
         //méthode d'ajout
         public function ajout($cnx){
+            $this->password=md5(sha1($this->password));
         	$cnx->exec("insert into employeur (nom_emp,pren_emp,cin_emp,password,naiss_emp,fonction,tel_emp,photo) 
                 values ('".$this->nom_emp."','".$this->pren_emp."','".$this->cin_emp."','".$this->password."','".$this->naiss_emp."','".$this->fonction."','".$this->tel_emp."','".$this->photo."')");
             $this->redirect("Employeur");
@@ -55,10 +56,18 @@
         
         //méthode de modification
         public function  edit($cnx){
+            $this->password=md5(sha1($this->password));
             $cnx->exec("update employeur set nom_emp='".$this->nom_emp."', pren_emp='".$this->pren_emp."', cin_emp='".$this->cin_emp."', password='".$this->password."', naiss_emp='".$this->naiss_emp."',fonction ='".$this->fonction."' , tel_emp='".$this->tel_emp."' , photo='".$this->photo."'
                 where id_emp='".$this->id_emp."'");
             $this->redirect("Employeur");
         }
-        
+
+                
+        //méthode de modification sans changer la mot de passe
+        public function  edit_sans_changer_password($cnx){
+            $cnx->exec("update employeur set nom_emp='".$this->nom_emp."', pren_emp='".$this->pren_emp."', cin_emp='".$this->cin_emp."', naiss_emp='".$this->naiss_emp."',fonction ='".$this->fonction."' , tel_emp='".$this->tel_emp."' , photo='".$this->photo."'
+                where id_emp='".$this->id_emp."'");
+            $this->redirect("Employeur");
+        }
     }
 ?>
